@@ -5035,3 +5035,10 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# --- Автосинк в git-репо ---
+try:
+    from git_sync import git_sync
+    git_sync("generator run")
+except Exception as e:
+    print(f"git_sync skipped: {e}")

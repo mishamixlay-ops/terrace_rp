@@ -37,7 +37,8 @@ def _update_actual_copies(folder: Path):
 
 
 def git_sync(label: str = "auto-sync"):
-    """git add/commit/push. Если репо не настроен или нет изменений — тихо."""
+    """git add/commit/push. Пушит даже если новых изменений нет,
+    но есть незапушенные коммиты."""
     repo_dir = Path(__file__).parent
     try:
         check = subprocess.run(
@@ -54,15 +55,22 @@ def git_sync(label: str = "auto-sync"):
             ["git", "status", "--porcelain"],
             cwd=repo_dir, capture_output=True, text=True
         )
-        if not status.stdout.strip():
-            print("git_sync: nothing to commit")
-            return
+        if status.stdout.strip():
+            msg = f"{label}: {datetime.now():%Y-%m-%d %H:%M}"
+            subprocess.run(["git", "add", "."], cwd=repo_dir, check=True)
+            subprocess.run(["git", "commit", "-m", msg], cwd=repo_dir, check=True)
+            print(f"git_sync: committed ({msg})")
+        else:
+            print("git_sync: no new changes")
 
-        msg = f"{label}: {datetime.now():%Y-%m-%d %H:%M}"
-        subprocess.run(["git", "add", "."], cwd=repo_dir, check=True)
-        subprocess.run(["git", "commit", "-m", msg], cwd=repo_dir, check=True)
-        subprocess.run(["git", "push"], cwd=repo_dir, check=True)
-        print(f"git_sync: pushed ({msg})")
+        # Пушим всегда — подхватит и незапушенные коммиты прошлых запусков
+        push = subprocess.run(
+            ["git", "push"], cwd=repo_dir, capture_output=True, text=True
+        )
+        if push.returncode == 0:
+            print("git_sync: push ok")
+        else:
+            print(f"git_sync: push failed: {push.stderr.strip()}")
 
     except Exception as e:
         print(f"git_sync: error ({e}), continuing anyway")

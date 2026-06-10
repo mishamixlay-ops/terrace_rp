@@ -812,22 +812,39 @@ def parse_jk_data(driver, jk_name: str, url: str, block_id_hint: str = "") -> di
 
     # ── Карточки особенностей ─────────────────────────────────
     try:
-        features = driver.execute_script("""
-            var items = document.querySelectorAll('.object-about__item, .object-about [class*="item"]');
-            var result = [];
-            items.forEach(function(el) {
-                var text = el.querySelector('.advantages-list__text');
-                var img  = el.querySelector('img');
-                if (text || img) {
-                    result.push({
-                        text: text ? text.innerText.trim() : '',
-                        img:  img  ? img.src : ''
-                    });
-                }
-            });
-            return result;
+        # Скроллим к блоку и ждём загрузки lazy-картинок
+        driver.execute_script("""
+            var el = document.querySelector('.object-about');
+            if (el) el.scrollIntoView({block:'center'});
         """)
-        result["features"] = features or []
+        features = []
+        for _feat_wait in range(8):
+            features = driver.execute_script("""
+                var items = document.querySelectorAll('.object-about__item, .object-about [class*="item"]');
+                var result = [];
+                items.forEach(function(el) {
+                    var text = el.querySelector('.advantages-list__text');
+                    var img  = el.querySelector('img');
+                    var src  = '';
+                    if (img) {
+                        src = img.currentSrc || img.src || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+                        if (src.startsWith('data:')) src = img.getAttribute('data-src') || '';
+                    }
+                    if (text || img) {
+                        result.push({
+                            text: text ? text.innerText.trim() : '',
+                            img:  src
+                        });
+                    }
+                });
+                return result;
+            """) or []
+            imgs_total = sum(1 for f in features if 'img' in f)
+            imgs_ok    = sum(1 for f in features if f.get('img'))
+            if not features or imgs_ok == imgs_total or _feat_wait == 7:
+                break
+            time.sleep(1)
+        result["features"] = features
     except Exception:
         pass
 
@@ -1141,7 +1158,15 @@ def save_jk_data(jk_name: str, data: dict):
             all_data = json.loads(JK_DATA_FILE.read_text(encoding="utf-8"))
         except Exception:
             pass
-    # Обновляем данные для ЖК
+    # Обновляем данные для ЖК.
+    # Защита: не затираем непустые about/features пустыми или "обеднёнными" (без картинок)
+    old = all_data.get(jk_name, {})
+    def _img_count(feats):
+        return sum(1 for f in (feats or []) if isinstance(f, dict) and f.get('img'))
+    if old.get('about') and not data.get('about'):
+        data['about'] = old['about']
+    if old.get('features') and _img_count(data.get('features')) < _img_count(old.get('features')):
+        data['features'] = old['features']
     all_data[jk_name] = data
     # Сохраняем локально
     JK_DATA_FILE.write_text(json.dumps(all_data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -1968,6 +1993,107 @@ if __name__ == "__main__":
         else:
             print("[!] Укажите ЖК и номер: --reset-layout \"Вилла Марина\" 15")
             sys.exit(1)
+
+    if "--fix-features" in sys.argv:
+        # Перепарсит ТОЛЬКО about/features у ЖК где нет картинок в features
+        if not JK_DATA_FILE.exists():
+            print("[!] jk_data.json не найден")
+            sys.exit(1)
+        all_data = json.loads(JK_DATA_FILE.read_text(encoding="utf-8"))
+
+        def _imgs(feats):
+            return sum(1 for f in (feats or []) if isinstance(f, dict) and f.get('img'))
+
+        # Берём имена из актуального Excel
+        import pandas as _pd
+        _xl = get_prev_excel()
+        if not _xl:
+            print("[!] Excel не найден")
+            sys.exit(1)
+        _df = _pd.read_excel(_xl)
+        _col = next((c for c in _df.columns if c == 'ЖК'), None)
+        excel_jk = sorted(set(str(v).strip() for v in _df[_col].dropna()
+                              if str(v).strip() not in ('', 'nan')))
+
+        to_fix = [jk for jk in excel_jk
+                  if jk not in all_data or _imgs(all_data.get(jk, {}).get('features')) == 0]
+        print(f"[•] ЖК без картинок features: {len(to_fix)} из {len(excel_jk)}")
+        if not to_fix:
+            print("[✓] Всё в порядке")
+            sys.exit(0)
+
+        driver = get_driver()
+        try:
+            ensure_auth(driver)
+            all_links = get_object_links(driver)
+            print(f"[•] ЖК на сайте: {len(all_links)}")
+            done = fail = 0
+            for n, jk_name in enumerate(to_fix, 1):
+                name, url = find_jk_link(jk_name, all_links)
+                if not url:
+                    print(f"  [{n}/{len(to_fix)}] {jk_name}: не найден на сайте")
+                    fail += 1
+                    continue
+                print(f"  [{n}/{len(to_fix)}] {jk_name}…", end=" ", flush=True)
+                driver.get(url)
+                wait_for_page_ready(driver)
+                for pct in [0.3, 0.6, 1.0]:
+                    driver.execute_script(f"window.scrollTo(0, document.body.scrollHeight * {pct});")
+                    time.sleep(0.5)
+                driver.execute_script("""
+                    var el = document.querySelector('.object-about');
+                    if (el) el.scrollIntoView({block:'center'});
+                """)
+                time.sleep(1.5)
+                about = driver.execute_script("""
+                    var els = document.querySelectorAll('.object-about p');
+                    if (els.length) return Array.from(els).map(e => e.innerText.trim()).filter(t => t).join('\\n\\n');
+                    var el = document.querySelector('.object-about__text, .object-about p');
+                    return el ? el.innerText.trim() : '';
+                """) or ""
+                features = []
+                for _w in range(8):
+                    features = driver.execute_script("""
+                        var items = document.querySelectorAll('.object-about__item, .object-about [class*="item"]');
+                        var result = [];
+                        items.forEach(function(el) {
+                            var text = el.querySelector('.advantages-list__text');
+                            var img  = el.querySelector('img');
+                            var src  = '';
+                            if (img) {
+                                src = img.currentSrc || img.src || img.getAttribute('data-src') || '';
+                                if (src.startsWith('data:')) src = img.getAttribute('data-src') || '';
+                            }
+                            if (text || img) result.push({text: text ? text.innerText.trim() : '', img: src});
+                        });
+                        return result;
+                    """) or []
+                    got = sum(1 for f in features if f.get('img'))
+                    if not features or got == len(features) or _w == 7:
+                        break
+                    time.sleep(1)
+                got = sum(1 for f in features if f.get('img'))
+                entry = all_data.get(jk_name, {"about": "", "features": [], "promo": [], "mortgage": [], "installments": []})
+                if about:
+                    entry["about"] = about
+                if got > _imgs(entry.get("features")):
+                    entry["features"] = features
+                all_data[jk_name] = entry
+                JK_DATA_FILE.write_text(json.dumps(all_data, ensure_ascii=False, indent=2), encoding="utf-8")
+                print(f"✓ карточек: {len(features)}, с img: {got}")
+                done += 1
+            try:
+                s3 = get_s3_client()
+                s3.put_object(Bucket=S3_BUCKET, Key=S3_JK_DATA_KEY,
+                              Body=JK_DATA_FILE.read_bytes(),
+                              ContentType="application/json", ACL="public-read")
+                print("[☁] jk_data.json → S3")
+            except Exception as e:
+                print(f"[!] S3: {e}")
+            print(f"\n[✓] Обработано: {done}, не найдено: {fail}")
+        finally:
+            driver.quit()
+        sys.exit(0)
 
     if "--parse-jk-one" in sys.argv:
         # Парсим данные одного конкретного ЖК

@@ -40,6 +40,9 @@ INSTALL_SHEET_ID   = os.getenv("INSTALL_SHEET_ID",  "1SdqN7pe3bggjmz6jWeezWaAJdt
 # Установи свой URL (без слеша на конце):
 # Пример: https://storage.yandexcloud.net/my-bucket
 YANDEX_CLOUD_BASE_URL = "https://storage.yandexcloud.net/royaltyplace/terrace"
+# Версия сборки — добавляется к filter.css/filter.js для сброса кэша браузера
+import time
+BUILD_VERSION = int(time.time())
 
 # URL основного сайта (для шаринга и OG-редиректа)
 MAIN_SITE_URL = "https://terrace-royaltyplace.ru"
@@ -4304,7 +4307,7 @@ container.addEventListener('click', e => {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
 <!-- noUiSlider JS defer -->
 <!-- noUiSlider загружается вместе с фильтром -->
-<link rel="stylesheet" href="{YANDEX_CLOUD_BASE_URL}/filter.css">
+<link rel="stylesheet" href="{YANDEX_CLOUD_BASE_URL}/filter.css?v={BUILD_VERSION}">
 </head>
 <body>
 
@@ -4673,8 +4676,8 @@ container.addEventListener('click', e => {
 
 <!-- noUiSlider загружается вместе с фильтром -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js" defer></script>
-<script src="{YANDEX_CLOUD_BASE_URL}/filter-data.js" defer></script>
-<script src="{YANDEX_CLOUD_BASE_URL}/filter.js" defer></script>
+<script src="{YANDEX_CLOUD_BASE_URL}/filter-data.js?v={BUILD_VERSION}" defer></script>
+<script src="{YANDEX_CLOUD_BASE_URL}/filter.js?v={BUILD_VERSION}" defer></script>
 
     <div class="fav-panel-overlay" id="fav-panel-overlay" onclick="toggleFavPanel()"></div>
     <div class="fav-panel" id="fav-panel">

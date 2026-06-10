@@ -1,3 +1,4 @@
+# ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 #!/usr/bin/env python3
 """
 Генератор HTML-фильтра для данных TrendAgent.

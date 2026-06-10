@@ -1,3 +1,4 @@
+# ACTUAL VERSION: v17 (source: trendagent_parser_17.py)
 #!/usr/bin/env python3
 """
 Парсер TrendAgent — квартиры + планировки + рендеры ЖК

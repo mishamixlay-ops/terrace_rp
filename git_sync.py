@@ -1,11 +1,11 @@
-﻿"""
+"""
 git_sync — автосинхронизация рабочей папки с GitHub-репо.
 Перед пушем копирует новейшие версии скриптов в стабильные имена
-(parser_actual.py, generator_actual.py), чтобы Claude мог подтягивать
-их по неизменным raw-ссылкам.
+(parser_actual.py, generator_actual.py) и вписывает номер версии
+в первую строку, чтобы Claude мог подтягивать их по неизменным
+raw-ссылкам и сразу видеть версию.
 """
 import re
-import shutil
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -21,19 +21,26 @@ def _latest(pattern: str, version_re: str, folder: Path):
         m = re.search(version_re, name)
         if m and int(m.group(1)) > best_v:
             best_v, best = int(m.group(1)), f
-    return best
+    return best, best_v
+
+
+def _copy_with_version(src: Path, dst: Path, version: int):
+    """Копирует src в dst, добавляя строку с версией в начало."""
+    text = src.read_text(encoding="utf-8")
+    header = f"# ACTUAL VERSION: v{version} (source: {src.name})\n"
+    dst.write_text(header + text, encoding="utf-8")
 
 
 def _update_actual_copies(folder: Path):
     """Копирует новейший парсер и генератор в стабильные имена."""
-    parser = _latest("trendagent_parser_*.py", r"trendagent_parser_(\d+)\.py", folder)
-    gen = _latest("Generate_filter_*.py", r"Generate_filter_(\d+)", folder)
+    parser, pv = _latest("trendagent_parser_*.py", r"trendagent_parser_(\d+)\.py", folder)
+    gen, gv = _latest("Generate_filter_*.py", r"Generate_filter_(\d+)", folder)
     if parser:
-        shutil.copyfile(parser, folder / "parser_actual.py")
-        print(f"git_sync: parser_actual.py <- {parser.name}")
+        _copy_with_version(parser, folder / "parser_actual.py", pv)
+        print(f"git_sync: parser_actual.py <- {parser.name} (v{pv})")
     if gen:
-        shutil.copyfile(gen, folder / "generator_actual.py")
-        print(f"git_sync: generator_actual.py <- {gen.name}")
+        _copy_with_version(gen, folder / "generator_actual.py", gv)
+        print(f"git_sync: generator_actual.py <- {gen.name} (v{gv})")
 
 
 def git_sync(label: str = "auto-sync"):
@@ -63,7 +70,6 @@ def git_sync(label: str = "auto-sync"):
         else:
             print("git_sync: no new changes")
 
-        # Пушим всегда — подхватит и незапушенные коммиты прошлых запусков
         push = subprocess.run(
             ["git", "push"], cwd=repo_dir, capture_output=True, text=True
         )

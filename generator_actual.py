@@ -1534,7 +1534,7 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-promo-card-field-value { font-weight:400; color:#555; font-size:13px; line-height:1.5; }
 .apc-promo-card.apc-promo-extra { display:none; }
 .apc-promo-card.apc-promo-extra.visible { display:block; }
-.apc-promo-more { font-size:13px; color:#8E8E93; cursor:pointer; margin-top:4px; display:inline-block; }
+.apc-promo-more { font-size:13px; color:#8E8E93; cursor:pointer; margin-top:14px; display:inline-block; }
 .apc-promo-more::after { content:''; display:inline-block; width:6px; height:6px; border-right:1.5px solid #8E8E93; border-bottom:1.5px solid #8E8E93; transform:rotate(45deg); margin-left:5px; vertical-align:1px; transition:transform 0.3s; }
 .apc-promo-more.expanded::after { transform:rotate(-135deg); vertical-align:-2px; }
 .apc-promo-tooltip { display:none; position:absolute; left:0; top:calc(100% + 6px); width:280px; background:#fff; border:1px solid #e0e0e0; border-radius:10px; padding:10px 12px; font-size:13px; font-weight:400; color:#555; line-height:1.5; z-index:10; box-shadow:0 4px 16px rgba(0,0,0,0.10); white-space:normal; overflow-wrap:break-word; }
@@ -1560,6 +1560,10 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-inst-tags { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
 .apc-inst-tag { background:rgba(0,0,0,0.06); color:#555; font-size:11px; padding:3px 8px; border-radius:8px; white-space:nowrap; }
 .apc-inst-tag.apc-inst-tag-pv { background:#34C759; color:#fff; }
+.apc-mort-head-right { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+.apc-mort-rate { font-size:15px; font-weight:500; color:#1a1a1a; white-space:nowrap; }
+.apc-mort-sub { font-size:12px; color:#8E8E93; margin-top:3px; }
+.apc-inst-tag.apc-mort-tag-gov { background:#E1F5EE; color:#0F6E56; }
 .apc-inst-drawer { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
 .apc-inst-card.open .apc-inst-drawer { max-height:600px; }
 .apc-inst-body { margin-top:4px; padding:12px; background:#fff; border:1px solid #E5E5EA; border-radius:12px; }
@@ -1902,6 +1906,22 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
   transform:rotate(180deg);
 }
 
+/* === Шевроны рассрочек — SVG жирный, поворот при .open === */
+.apc-inst-chevron {
+  font-size:0 !important;
+  width:18px;
+  height:18px;
+  display:inline-block;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230F1014" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  transition:transform 0.18s ease;
+  flex-shrink:0;
+  padding-top:0 !important;
+  color:transparent !important;
+}
+
 /* === Финансовый disclaimer — на сером, между островами === */
 .apc-finance-disclaimer {
   padding:12px 16px 4px !important;
@@ -1974,6 +1994,8 @@ function _viewTip(el,e){
 }
 function _togInst(cardId){var card=document.getElementById(cardId);if(!card)return;var was=card.classList.contains('open');document.querySelectorAll('.apc-inst-card.open').forEach(function(c){c.classList.remove('open')});if(!was)card.classList.add('open');}
 function _togInstMore(el){var exp=el.classList.toggle('expanded');var cards=el.parentNode.querySelectorAll('.apc-inst-card.apc-promo-hidden');cards.forEach(function(c){exp?c.classList.add('visible'):c.classList.remove('visible')});var total=cards.length;var w=total===1?'программа':(total<5?'программы':'программ');el.textContent=exp?'Свернуть':'Ещё '+total+' '+w;}
+function _togMort(cardId){var card=document.getElementById(cardId);if(!card)return;var was=card.classList.contains('open');document.querySelectorAll('#apc-mort-block .apc-inst-card.open').forEach(function(c){c.classList.remove('open')});if(!was)card.classList.add('open');}
+function _togMortMore(el){var exp=el.classList.toggle('expanded');var cards=el.parentNode.querySelectorAll('.apc-inst-card.apc-promo-hidden');cards.forEach(function(c){exp?c.classList.add('visible'):c.classList.remove('visible')});var total=cards.length;var w=total===1?'программа':(total<5?'программы':'программ');el.textContent=exp?'Свернуть':'Ещё '+total+' '+w;}
       function _togFin(btn,wrapId,fadeId){var w=document.getElementById(wrapId);if(!w)return;w.querySelectorAll('.apc-promo-hidden').forEach(function(el){el.classList.toggle('visible')});var f=document.getElementById(fadeId);if(f)f.classList.toggle('hidden');btn.textContent=btn.textContent==='Свернуть'?btn.dataset.more:'Свернуть';}
 function _promoTip(btn){var tip=btn.nextElementSibling;if(!tip||!tip.classList.contains('apc-promo-tooltip')){tip=btn.closest('[style*="position"]').querySelector('.apc-promo-tooltip')||btn.parentElement.parentElement.querySelector('.apc-promo-tooltip');}if(!tip)return;var isOpen=tip.classList.contains('visible');document.querySelectorAll('.apc-promo-tooltip.visible').forEach(function(t){t.classList.remove('visible')});document.querySelectorAll('.apc-promo-info.active').forEach(function(b){b.classList.remove('active')});if(!isOpen){tip.style.left='50%';tip.style.right='auto';tip.style.transform='translateX(-50%)';tip.classList.add('visible');btn.classList.add('active');var r=tip.getBoundingClientRect();var pad=8;if(r.right>window.innerWidth-pad){tip.style.left='auto';tip.style.right='0';tip.style.transform='none';}else if(r.left<pad){tip.style.left='0';tip.style.right='auto';tip.style.transform='none';}}}
 document.addEventListener('click',function(e){if(!e.target.classList.contains('apc-promo-info')){document.querySelectorAll('.apc-promo-tooltip.visible').forEach(function(t){t.classList.remove('visible')});document.querySelectorAll('.apc-promo-info.active').forEach(function(b){b.classList.remove('active')});}if(!e.target.closest('.apc-promo-card')){document.querySelectorAll('.apc-promo-card.open').forEach(function(c){c.classList.remove('open')});}});
@@ -3133,60 +3155,79 @@ function openAptCard(apt) {
     let mhtml = '';
     let mort = apt.mortgage || [];
     const inst = apt.installments || [];
-    function _val2(v) { if (!v && v !== 0) return null; var s = String(v).trim().toLowerCase(); if (!s || s === 'null' || s === 'none' || s === 'undefined' || s.startsWith('null') || s.endsWith('null')) return null; return v; }
-    function _fmt(v, prefix) { var val = _val2(v); if (!val) return 'под запрос'; if (prefix && !/[\d%]/.test(String(val))) return String(val); return (prefix || '') + val; }
+    function _mval(v) { if (!v && v !== 0) return null; var s = String(v).trim().toLowerCase(); if (!s || s === 'null' || s === 'none' || s === 'undefined' || s.startsWith('null') || s.endsWith('null')) return null; return v; }
+    function _mfmt(v, prefix) { var val = _mval(v); if (!val) return null; if (prefix && !/[\d%]/.test(String(val))) return String(val); return (prefix || '') + val; }
 
-    if (mort.length > 0) {
+    var mortFiltered = mort.filter(function(m) { return !!_mval(m.rate); });
+
+    if (mortFiltered.length > 0) {
       mhtml += '<div class="apc-finance-divider"></div>';
       mhtml += '<div class="apc-finance-section">';
       mhtml += '<div class="apc-finance-title">Доступные варианты ипотеки</div>';
-      var mortShowCount = 3;
-      mhtml += '<div class="apc-fin-wrap" id="apc-mort-wrap">';
-      var mortFiltered = mort.filter(function(m) { return !!_val2(m.rate); });
+      var mortShowCount = 4;
+      mhtml += '<div class="apc-promo-list">';
+
       mortFiltered.forEach(function(m, idx) {
         var hidden = idx >= mortShowCount ? ' apc-promo-hidden' : '';
-        var pvVal   = _val2(m.pv);
-        var rateVal = _val2(m.rate);
-        mhtml += '<div class="apc-finance-item' + hidden + '">';
-        mhtml += '<span class="apc-finance-name">' + m.prog + '</span>';
-        mhtml += '<div class="apc-finance-cols">';
-        mhtml += '<div class="apc-finance-col"><div class="apc-finance-col-label">ПВ</div>';
-        mhtml += '<div class="apc-finance-col-value">' + _fmt(pvVal) + '</div></div>';
-        mhtml += '<div class="apc-finance-col"><div class="apc-finance-col-label">Ставка</div>';
-        mhtml += '<div style="display:flex;align-items:center;gap:6px;justify-content:flex-end;position:relative">';
-        if (m.rate_note || m.second_rate) {
-          mhtml += '<span class="apc-promo-info" onclick="_promoTip(this)">ℹ</span>';
-          var tip = '<div class="apc-promo-tooltip apc-mort-tip">';
-          if (m.first_rate !== null && m.first_rate !== undefined && m.first_months) {
-            tip += '<div class="apc-mort-tip-row"><span>Ставка первые ' + m.first_months + ' мес.</span><span>' + m.first_rate + '%</span></div>';
-            tip += '<div class="apc-mort-tip-row apc-mort-tip-second"><span>Ставка с ' + (m.first_months + 1) + ' месяца</span><span>' + m.second_rate + '%</span></div>';
-          } else if (m.rate_note) {
-            tip += '<div class="apc-mort-tip-row"><span>' + m.rate_note + '</span></div>';
+        var cardId = 'apc-mort-card-' + idx;
+        var pvVal     = _mval(m.pv);
+        var rateVal   = _mval(m.rate);
+        var periodVal = _mval(m.period);
+        var isFamily  = /семейн|господдержк|^it |^ит /i.test(String(m.prog || ''));
+
+        mhtml += '<div class="apc-inst-card' + hidden + '" id="' + cardId + '" onclick="_togMort(\'' + cardId + '\')">';
+        mhtml += '<div class="apc-inst-top">';
+        mhtml += '<div class="apc-inst-head">';
+        mhtml += '<span class="apc-inst-name">' + m.prog + '</span>';
+        mhtml += '<div class="apc-mort-head-right">';
+        mhtml += '<span class="apc-mort-rate">' + (_mfmt(rateVal, 'от ') || '') + '</span>';
+        mhtml += '<svg class="apc-inst-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#8E8E93" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,6 15,12 9,18"/></svg>';
+        mhtml += '</div>';
+        mhtml += '</div>';
+
+        var subParts = [];
+        if (pvVal) subParts.push('ПВ ' + pvVal);
+        if (periodVal) subParts.push('до ' + periodVal + ' лет');
+        if (subParts.length) mhtml += '<div class="apc-mort-sub">' + subParts.join(' · ') + '</div>';
+
+        if (isFamily) mhtml += '<div class="apc-inst-tags"><span class="apc-inst-tag apc-mort-tag-gov">господдержка</span></div>';
+
+        mhtml += '</div>';
+
+        mhtml += '<div class="apc-inst-drawer"><div class="apc-inst-body">';
+
+        if (m.first_rate !== null && m.first_rate !== undefined && m.first_months) {
+          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Ставка первые ' + m.first_months + ' мес.</span><span class="apc-inst-grid-val">' + m.first_rate + '%</span></div>';
+          if (m.second_rate) {
+            mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Ставка с ' + (m.first_months + 1) + ' месяца</span><span class="apc-inst-grid-val">' + m.second_rate + '%</span></div>';
           }
-          if (m.pv) { tip += '<div class="apc-mort-tip-row apc-mort-tip-light"><span>Первый взнос, от</span><span>' + m.pv.replace("от ","") + '</span></div>'; }
-          if (m.period) { tip += '<div class="apc-mort-tip-row apc-mort-tip-light"><span>Срок кредита, до</span><span>' + m.period + ' лет</span></div>'; }
-          tip += '</div>';
-          mhtml += tip;
+        } else if (_mval(m.rate_note)) {
+          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Условие ставки</span><span class="apc-inst-grid-val">' + m.rate_note + '</span></div>';
         }
-        mhtml += '<div class="apc-finance-col-value">' + _fmt(rateVal, 'от ') + '</div>';
+        if (pvVal) {
+          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Первоначальный взнос</span><span class="apc-inst-grid-val">' + pvVal + '</span></div>';
+        }
+        if (periodVal) {
+          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Срок кредита, до</span><span class="apc-inst-grid-val">' + periodVal + ' лет</span></div>';
+        }
+        if (_mval(m.bank)) {
+          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Банк</span><span class="apc-inst-grid-val">' + m.bank + '</span></div>';
+        }
+
         mhtml += '</div></div>';
-        mhtml += '</div></div>';
+        mhtml += '</div>';
       });
-      mort = mortFiltered;
-      if (mort.length > mortShowCount) {
-        mhtml += '<div class="apc-fin-fade" id="apc-mort-fade"></div>';
-        mhtml += '</div>';
-        var restMort = mort.length - mortShowCount;
+
+      mhtml += '</div>';
+      if (mortFiltered.length > mortShowCount) {
+        var restMort = mortFiltered.length - mortShowCount;
         var mortWord = _dp(restMort,'программа','программы','программ');
-        mhtml += '<div class="apc-fin-more" data-more="Ещё ' + restMort + ' ' + mortWord + '" onclick="_togFin(this,&apos;apc-mort-wrap&apos;,&apos;apc-mort-fade&apos;)">';
-        mhtml += 'Ещё ' + restMort + ' ' + mortWord + '</div>';
-      } else {
-        mhtml += '</div>';
+        mhtml += '<div class="apc-promo-more" onclick="_togMortMore(this)">Ещё ' + restMort + ' ' + mortWord + '</div>';
       }
       mhtml += '</div>';
     }
+    mort = mortFiltered;
 
-    // Дисклеймер
     if (inst.length > 0 || mort.length > 0) {
       mhtml += '<div class="apc-finance-disclaimer">* Условия программ актуальны на дату обновления и носят ознакомительный характер. Уточняйте у менеджера.</div>';
     }

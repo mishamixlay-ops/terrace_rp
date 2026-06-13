@@ -1,5 +1,6 @@
 # ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 # ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
+# ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 #!/usr/bin/env python3
 """
 Генератор HTML-фильтра для данных TrendAgent.
@@ -1525,10 +1526,18 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-promo-card-sub { font-size:12px; color:#8E8E93; margin-top:2px; }
 .apc-promo-card-chevron { transition:transform 0.3s ease; flex-shrink:0; }
 .apc-promo-card.open .apc-promo-card-chevron { transform:rotate(90deg); }
-.apc-promo-card-drawer { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
-.apc-promo-card.open .apc-promo-card-drawer { max-height:600px; }
+.apc-promo-card-drawer { display:grid; grid-template-rows:0fr; transition:grid-template-rows 0.42s cubic-bezier(.4,0,.2,1); }
+.apc-promo-card.open .apc-promo-card-drawer { grid-template-rows:1fr; }
+.apc-promo-card-drawer-inner { overflow:hidden; min-height:0; }
 .apc-promo-card-body { margin-top:4px; padding:12px; background:#fff; border:1px solid #E5E5EA; border-radius:12px; }
-.apc-promo-card-field { margin-bottom:8px; }
+.apc-promo-card-field { margin-bottom:8px; opacity:0; transform:translateX(-6px); }
+.apc-promo-card.open .apc-promo-card-field { animation:apcStagger 0.4s forwards; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(1){ animation-delay:.1s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(2){ animation-delay:.16s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(3){ animation-delay:.22s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(4){ animation-delay:.28s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(5){ animation-delay:.34s; }
+@keyframes apcStagger { to { opacity:1; transform:translateX(0); } }
 .apc-promo-card-field:last-child { margin-bottom:0; }
 .apc-promo-card-field-label { font-weight:600; color:#1a1a1a; font-size:13px; margin-bottom:2px; }
 .apc-promo-card-field-value { font-weight:400; color:#555; font-size:13px; line-height:1.5; }
@@ -1564,10 +1573,52 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-mort-rate { font-size:15px; font-weight:500; color:#1a1a1a; white-space:nowrap; }
 .apc-mort-sub { font-size:12px; color:#8E8E93; margin-top:3px; }
 .apc-inst-tag.apc-mort-tag-gov { background:#E1F5EE; color:#0F6E56; }
-.apc-inst-drawer { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
-.apc-inst-card.open .apc-inst-drawer { max-height:600px; }
+.apc-mtg-list { }
+.apc-mtg-row { cursor:pointer; border-bottom:1px solid #E5E5EA; }
+.apc-mtg-row:last-of-type { border-bottom:none; }
+.apc-mtg-row.apc-promo-hidden { display:none; }
+.apc-mtg-row.apc-promo-hidden.visible { display:block; }
+.apc-mtg-head { display:flex; align-items:center; justify-content:space-between; padding:11px 0; gap:12px; }
+.apc-mtg-info { min-width:0; }
+.apc-mtg-name { font-size:14px; font-weight:500; color:#1a1a1a; transition:color .25s; }
+.apc-mtg-sub { font-size:11px; color:#8E8E93; margin-top:2px; }
+.apc-mtg-rate { display:flex; align-items:baseline; gap:1px; flex-shrink:0; }
+.apc-mtg-rate-num { font-size:22px; font-weight:600; line-height:1; color:#1a1a1a; transition:transform .3s cubic-bezier(.34,1.56,.64,1); transform-origin:right center; }
+.apc-mtg-rate-pct { font-size:13px; font-weight:600; color:#1a1a1a; }
+.apc-mtg-low .apc-mtg-rate-num, .apc-mtg-low .apc-mtg-rate-pct { color:#0F6E56; }
+.apc-mtg-row.open .apc-mtg-rate-num { transform:scale(1.18); }
+.apc-mtg-row.open .apc-mtg-name { color:#0F6E56; }
+.apc-mtg-panel { display:grid; grid-template-rows:0fr; transition:grid-template-rows .42s cubic-bezier(.4,0,.2,1); }
+.apc-mtg-row.open .apc-mtg-panel { grid-template-rows:1fr; }
+.apc-mtg-panel-inner { overflow:hidden; min-height:0; }
+.apc-mtg-detail { padding:2px 0 14px; }
+.apc-mtg-timeline { position:relative; padding-left:18px; margin-bottom:12px; }
+.apc-mtg-timeline::before { content:''; position:absolute; left:4px; top:6px; bottom:6px; width:2px; background:linear-gradient(#34C759,#C7C7CC); }
+.apc-mtg-tl-item { position:relative; padding:5px 0; opacity:0; transform:translateX(-6px); }
+.apc-mtg-row.open .apc-mtg-tl-item { animation:apcStagger .4s forwards; }
+.apc-mtg-row.open .apc-mtg-tl-item:nth-child(1){ animation-delay:.12s; }
+.apc-mtg-row.open .apc-mtg-tl-item:nth-child(2){ animation-delay:.2s; }
+.apc-mtg-tl-dot { position:absolute; left:-17px; top:9px; width:9px; height:9px; border-radius:50%; background:#fff; border:2px solid #34C759; }
+.apc-mtg-tl-dot.gray { border-color:#C7C7CC; }
+.apc-mtg-tl-period { font-size:11px; color:#8E8E93; }
+.apc-mtg-tl-rate { font-size:14px; font-weight:600; color:#1a1a1a; }
+.apc-mtg-note { font-size:13px; color:#555; margin-bottom:10px; opacity:0; transform:translateX(-6px); }
+.apc-mtg-row.open .apc-mtg-note { animation:apcStagger .4s .14s forwards; }
+.apc-mtg-chips { display:flex; flex-wrap:wrap; gap:6px; opacity:0; transform:translateY(4px); }
+.apc-mtg-row.open .apc-mtg-chips { animation:apcStagger .4s .28s forwards; }
+.apc-mtg-chip { font-size:11px; background:#fff; border:1px solid #E5E5EA; border-radius:8px; padding:4px 9px; color:#555; }
+.apc-mtg-chip b { color:#1a1a1a; font-weight:500; }
+.apc-inst-drawer { display:grid; grid-template-rows:0fr; transition:grid-template-rows 0.42s cubic-bezier(.4,0,.2,1); }
+.apc-inst-card.open .apc-inst-drawer { grid-template-rows:1fr; }
+.apc-inst-drawer-inner { overflow:hidden; min-height:0; }
 .apc-inst-body { margin-top:4px; padding:12px; background:#fff; border:1px solid #E5E5EA; border-radius:12px; }
-.apc-inst-grid-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #F2F2F7; font-size:13px; }
+.apc-inst-grid-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #F2F2F7; font-size:13px; opacity:0; transform:translateX(-6px); }
+.apc-inst-card.open .apc-inst-grid-row { animation:apcStagger 0.4s forwards; }
+.apc-inst-card.open .apc-inst-grid-row:nth-child(1){ animation-delay:.1s; }
+.apc-inst-card.open .apc-inst-grid-row:nth-child(2){ animation-delay:.16s; }
+.apc-inst-card.open .apc-inst-grid-row:nth-child(3){ animation-delay:.22s; }
+.apc-inst-card.open .apc-inst-grid-row:nth-child(4){ animation-delay:.28s; }
+.apc-inst-card.open .apc-inst-sched-title,.apc-inst-card.open .apc-inst-comment-title { opacity:0; transform:translateX(-6px); animation:apcStagger 0.4s .3s forwards; }
 .apc-inst-grid-row:last-child { border-bottom:none; }
 .apc-inst-grid-lbl { color:#8E8E93; }
 .apc-inst-grid-val { font-weight:500; color:#1a1a1a; }
@@ -1996,6 +2047,8 @@ function _togInst(cardId){var card=document.getElementById(cardId);if(!card)retu
 function _togInstMore(el){var exp=el.classList.toggle('expanded');var cards=el.parentNode.querySelectorAll('.apc-inst-card.apc-promo-hidden');cards.forEach(function(c){exp?c.classList.add('visible'):c.classList.remove('visible')});var total=cards.length;var w=total===1?'программа':(total<5?'программы':'программ');el.textContent=exp?'Свернуть':'Ещё '+total+' '+w;}
 function _togMort(cardId){var card=document.getElementById(cardId);if(!card)return;var was=card.classList.contains('open');document.querySelectorAll('#apc-mort-block .apc-inst-card.open').forEach(function(c){c.classList.remove('open')});if(!was)card.classList.add('open');}
 function _togMortMore(el){var exp=el.classList.toggle('expanded');var cards=el.parentNode.querySelectorAll('.apc-inst-card.apc-promo-hidden');cards.forEach(function(c){exp?c.classList.add('visible'):c.classList.remove('visible')});var total=cards.length;var w=total===1?'программа':(total<5?'программы':'программ');el.textContent=exp?'Свернуть':'Ещё '+total+' '+w;}
+function _togMtg(rowId){var row=document.getElementById(rowId);if(!row)return;var was=row.classList.contains('open');document.querySelectorAll('#apc-mort-block .apc-mtg-row.open').forEach(function(c){c.classList.remove('open')});if(!was)row.classList.add('open');}
+function _togMtgMore(el){var exp=el.classList.toggle('expanded');var rows=el.parentNode.querySelectorAll('.apc-mtg-row.apc-promo-hidden');rows.forEach(function(c){exp?c.classList.add('visible'):c.classList.remove('visible')});var total=rows.length;var w=total===1?'программа':(total<5?'программы':'программ');el.textContent=exp?'Свернуть':'Ещё '+total+' '+w;}
       function _togFin(btn,wrapId,fadeId){var w=document.getElementById(wrapId);if(!w)return;w.querySelectorAll('.apc-promo-hidden').forEach(function(el){el.classList.toggle('visible')});var f=document.getElementById(fadeId);if(f)f.classList.toggle('hidden');btn.textContent=btn.textContent==='Свернуть'?btn.dataset.more:'Свернуть';}
 function _promoTip(btn){var tip=btn.nextElementSibling;if(!tip||!tip.classList.contains('apc-promo-tooltip')){tip=btn.closest('[style*="position"]').querySelector('.apc-promo-tooltip')||btn.parentElement.parentElement.querySelector('.apc-promo-tooltip');}if(!tip)return;var isOpen=tip.classList.contains('visible');document.querySelectorAll('.apc-promo-tooltip.visible').forEach(function(t){t.classList.remove('visible')});document.querySelectorAll('.apc-promo-info.active').forEach(function(b){b.classList.remove('active')});if(!isOpen){tip.style.left='50%';tip.style.right='auto';tip.style.transform='translateX(-50%)';tip.classList.add('visible');btn.classList.add('active');var r=tip.getBoundingClientRect();var pad=8;if(r.right>window.innerWidth-pad){tip.style.left='auto';tip.style.right='0';tip.style.transform='none';}else if(r.left<pad){tip.style.left='0';tip.style.right='auto';tip.style.transform='none';}}}
 document.addEventListener('click',function(e){if(!e.target.classList.contains('apc-promo-info')){document.querySelectorAll('.apc-promo-tooltip.visible').forEach(function(t){t.classList.remove('visible')});document.querySelectorAll('.apc-promo-info.active').forEach(function(b){b.classList.remove('active')});}if(!e.target.closest('.apc-promo-card')){document.querySelectorAll('.apc-promo-card.open').forEach(function(c){c.classList.remove('open')});}});
@@ -3013,14 +3066,14 @@ function openAptCard(apt) {
           if (c.sub) phtml += '<div class="apc-promo-card-sub">' + c.sub + '</div>';
           phtml += '</div>';
           if (hasDetails) {
-            phtml += '<div class="apc-promo-card-drawer"><div class="apc-promo-card-body">';
+            phtml += '<div class="apc-promo-card-drawer"><div class="apc-promo-card-drawer-inner"><div class="apc-promo-card-body">';
             c.fields.forEach(function(f){
               phtml += '<div class="apc-promo-card-field">';
               phtml += '<div class="apc-promo-card-field-label">' + f.label + '</div>';
               phtml += '<div class="apc-promo-card-field-value">' + f.value + '</div>';
               phtml += '</div>';
             });
-            phtml += '</div></div>';
+            phtml += '</div></div></div>';
           }
           phtml += '</div>';
         });
@@ -3103,7 +3156,7 @@ function openAptCard(apt) {
         ihtml += '</div>'; // top
 
         // Drawer
-        ihtml += '<div class="apc-inst-drawer"><div class="apc-inst-body">';
+        ihtml += '<div class="apc-inst-drawer"><div class="apc-inst-drawer-inner"><div class="apc-inst-body">';
 
         var tableRows = [
           ['Переход на ипотеку', r.transition_to_mortgage],
@@ -3135,7 +3188,7 @@ function openAptCard(apt) {
           ihtml += '</div>';
         }
 
-        ihtml += '</div></div>'; // body + drawer
+        ihtml += '</div></div></div>'; // body + inner + drawer
         ihtml += '</div>'; // card
       });
       ihtml += '</div>';
@@ -3156,75 +3209,72 @@ function openAptCard(apt) {
     let mort = apt.mortgage || [];
     const inst = apt.installments || [];
     function _mval(v) { if (!v && v !== 0) return null; var s = String(v).trim().toLowerCase(); if (!s || s === 'null' || s === 'none' || s === 'undefined' || s.startsWith('null') || s.endsWith('null')) return null; return v; }
-    function _mfmt(v, prefix) { var val = _mval(v); if (!val) return null; if (prefix && !/[\d%]/.test(String(val))) return String(val); return (prefix || '') + val; }
+    function _mnum(v) { var s = String(v == null ? '' : v).replace('%','').replace(',','.').trim(); var n = parseFloat(s); return isNaN(n) ? null : n; }
+    function _mclean(v) { return String(v == null ? '' : v).replace(/^от\s*/i,'').trim(); }
 
     var mortFiltered = mort.filter(function(m) { return !!_mval(m.rate); });
 
     if (mortFiltered.length > 0) {
       mhtml += '<div class="apc-finance-divider"></div>';
       mhtml += '<div class="apc-finance-section">';
-      mhtml += '<div class="apc-finance-title">Доступные варианты ипотеки</div>';
+      mhtml += '<div class="apc-finance-title">Ипотека</div>';
       var mortShowCount = 4;
-      mhtml += '<div class="apc-promo-list">';
+      mhtml += '<div class="apc-mtg-list">';
 
       mortFiltered.forEach(function(m, idx) {
         var hidden = idx >= mortShowCount ? ' apc-promo-hidden' : '';
-        var cardId = 'apc-mort-card-' + idx;
-        var pvVal     = _mval(m.pv);
-        var rateVal   = _mval(m.rate);
+        var rowId = 'apc-mtg-row-' + idx;
+        var rateNum  = _mnum(m.rate);
+        var pvVal    = _mval(m.pv);
         var periodVal = _mval(m.period);
-        var isFamily  = /семейн|господдержк|^it |^ит /i.test(String(m.prog || ''));
+        var isLow = rateNum !== null && rateNum < 12;
 
-        mhtml += '<div class="apc-inst-card' + hidden + '" id="' + cardId + '" onclick="_togMort(\'' + cardId + '\')">';
-        mhtml += '<div class="apc-inst-top">';
-        mhtml += '<div class="apc-inst-head">';
-        mhtml += '<span class="apc-inst-name">' + m.prog + '</span>';
-        mhtml += '<div class="apc-mort-head-right">';
-        mhtml += '<span class="apc-mort-rate">' + (_mfmt(rateVal, 'от ') || '') + '</span>';
-        mhtml += '<svg class="apc-inst-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#8E8E93" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,6 15,12 9,18"/></svg>';
-        mhtml += '</div>';
-        mhtml += '</div>';
-
+        // ── строка ──
+        mhtml += '<div class="apc-mtg-row' + (isLow ? ' apc-mtg-low' : '') + hidden + '" id="' + rowId + '" onclick="_togMtg(\'' + rowId + '\')">';
+        mhtml += '<div class="apc-mtg-head">';
+        mhtml += '<div class="apc-mtg-info"><div class="apc-mtg-name">' + m.prog + '</div>';
         var subParts = [];
-        if (pvVal) subParts.push('ПВ ' + pvVal);
+        if (pvVal) subParts.push('ПВ ' + _mclean(pvVal));
         if (periodVal) subParts.push('до ' + periodVal + ' лет');
-        if (subParts.length) mhtml += '<div class="apc-mort-sub">' + subParts.join(' · ') + '</div>';
-
-        if (isFamily) mhtml += '<div class="apc-inst-tags"><span class="apc-inst-tag apc-mort-tag-gov">господдержка</span></div>';
-
+        if (subParts.length) mhtml += '<div class="apc-mtg-sub">' + subParts.join(' · ') + '</div>';
         mhtml += '</div>';
+        mhtml += '<div class="apc-mtg-rate"><span class="apc-mtg-rate-num">' + (rateNum !== null ? rateNum : _mclean(m.rate)) + '</span><span class="apc-mtg-rate-pct">%</span></div>';
+        mhtml += '</div>'; // head
 
-        mhtml += '<div class="apc-inst-drawer"><div class="apc-inst-body">';
+        // ── раскрывающаяся панель ──
+        mhtml += '<div class="apc-mtg-panel"><div class="apc-mtg-panel-inner"><div class="apc-mtg-detail">';
 
-        if (m.first_rate !== null && m.first_rate !== undefined && m.first_months) {
-          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Ставка первые ' + m.first_months + ' мес.</span><span class="apc-inst-grid-val">' + m.first_rate + '%</span></div>';
-          if (m.second_rate) {
-            mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Ставка с ' + (m.first_months + 1) + ' месяца</span><span class="apc-inst-grid-val">' + m.second_rate + '%</span></div>';
-          }
+        var hasTimeline = (m.first_rate !== null && m.first_rate !== undefined && m.first_months && m.second_rate);
+        if (hasTimeline) {
+          mhtml += '<div class="apc-mtg-timeline">';
+          mhtml += '<div class="apc-mtg-tl-item"><div class="apc-mtg-tl-dot"></div><div class="apc-mtg-tl-period">первые ' + m.first_months + ' мес.</div><div class="apc-mtg-tl-rate">' + m.first_rate + '%</div></div>';
+          mhtml += '<div class="apc-mtg-tl-item"><div class="apc-mtg-tl-dot gray"></div><div class="apc-mtg-tl-period">с ' + (m.first_months + 1) + ' месяца</div><div class="apc-mtg-tl-rate">' + m.second_rate + '%</div></div>';
+          mhtml += '</div>';
         } else if (_mval(m.rate_note)) {
-          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Условие ставки</span><span class="apc-inst-grid-val">' + m.rate_note + '</span></div>';
-        }
-        if (pvVal) {
-          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Первоначальный взнос</span><span class="apc-inst-grid-val">' + pvVal + '</span></div>';
-        }
-        if (periodVal) {
-          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Срок кредита, до</span><span class="apc-inst-grid-val">' + periodVal + ' лет</span></div>';
-        }
-        if (_mval(m.bank)) {
-          mhtml += '<div class="apc-inst-grid-row"><span class="apc-inst-grid-lbl">Банк</span><span class="apc-inst-grid-val">' + m.bank + '</span></div>';
+          mhtml += '<div class="apc-mtg-note">' + m.rate_note + '</div>';
         }
 
-        mhtml += '</div></div>';
-        mhtml += '</div>';
+        // чипы
+        var chips = [];
+        if (pvVal) chips.push('ПВ <b>' + _mclean(pvVal) + '</b>');
+        if (periodVal) chips.push('срок <b>до ' + periodVal + ' лет</b>');
+        if (chips.length) {
+          mhtml += '<div class="apc-mtg-chips">';
+          chips.forEach(function(c){ mhtml += '<span class="apc-mtg-chip">' + c + '</span>'; });
+          mhtml += '</div>';
+        }
+
+        mhtml += '</div></div></div>'; // detail + inner + panel
+        mhtml += '</div>'; // row
       });
 
-      mhtml += '</div>';
+      mhtml += '</div>'; // list
       if (mortFiltered.length > mortShowCount) {
         var restMort = mortFiltered.length - mortShowCount;
         var mortWord = _dp(restMort,'программа','программы','программ');
-        mhtml += '<div class="apc-promo-more" onclick="_togMortMore(this)">Ещё ' + restMort + ' ' + mortWord + '</div>';
+        mhtml += '<div class="apc-promo-more" onclick="_togMtgMore(this)">Ещё ' + restMort + ' ' + mortWord + '</div>';
       }
-      mhtml += '</div>';
+      mhtml += '</div>'; // section
     }
     mort = mortFiltered;
 

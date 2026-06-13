@@ -2,6 +2,7 @@
 # ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 # ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 # ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
+# ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 #!/usr/bin/env python3
 """
 Генератор HTML-фильтра для данных TrendAgent.
@@ -1520,9 +1521,11 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-feature-card-text { font-size:11px; color:#1a1a1a; padding:6px 8px; line-height:1.3; }
 .apc-promo-list { display:flex; flex-direction:column; gap:8px; }
 .apc-promo-card { cursor:pointer; }
-.apc-promo-card-top { padding:10px 12px; background:#F2F2F7; border-radius:12px; }
+.apc-promo-card-top { padding:10px 12px; background:#F2F2F7; border-radius:12px; transition:transform .3s cubic-bezier(.34,1.56,.64,1); transform-origin:center; }
+.apc-promo-card.open .apc-promo-card-top { transform:scale(1.03); }
 .apc-promo-card-head { display:flex; align-items:center; justify-content:space-between; }
-.apc-promo-card-name { font-size:14px; font-weight:500; color:#1a1a1a; }
+.apc-promo-card-name { font-size:14px; font-weight:500; color:#1a1a1a; transition:transform .3s cubic-bezier(.34,1.56,.64,1); transform-origin:left center; display:inline-block; }
+.apc-promo-card.open .apc-promo-card-name { transform:scale(1.08); }
 .apc-promo-card-val { font-size:14px; font-weight:500; color:#8E8E93; margin-left:6px; }
 .apc-promo-card-sub { font-size:12px; color:#8E8E93; margin-top:2px; }
 .apc-promo-card-chevron { transition:transform 0.3s ease; flex-shrink:0; }
@@ -1533,11 +1536,13 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-promo-card-body { margin-top:4px; padding:12px; background:#fff; border:1px solid #E5E5EA; border-radius:12px; }
 .apc-promo-card-field { margin-bottom:8px; opacity:0; transform:translateX(-6px); }
 .apc-promo-card.open .apc-promo-card-field { animation:apcStagger 0.4s forwards; }
-.apc-promo-card.open .apc-promo-card-field:nth-child(1){ animation-delay:.1s; }
-.apc-promo-card.open .apc-promo-card-field:nth-child(2){ animation-delay:.16s; }
-.apc-promo-card.open .apc-promo-card-field:nth-child(3){ animation-delay:.22s; }
-.apc-promo-card.open .apc-promo-card-field:nth-child(4){ animation-delay:.28s; }
-.apc-promo-card.open .apc-promo-card-field:nth-child(5){ animation-delay:.34s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(1){ animation-delay:.08s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(2){ animation-delay:.14s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(3){ animation-delay:.20s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(4){ animation-delay:.26s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(5){ animation-delay:.32s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(6){ animation-delay:.38s; }
+.apc-promo-card.open .apc-promo-card-field:nth-child(7){ animation-delay:.44s; }
 @keyframes apcStagger { to { opacity:1; transform:translateX(0); } }
 .apc-promo-card-field:last-child { margin-bottom:0; }
 .apc-promo-card-field-label { font-weight:600; color:#1a1a1a; font-size:13px; margin-bottom:2px; }
@@ -1562,9 +1567,11 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-inst-card { cursor:pointer; }
 .apc-inst-card.apc-promo-hidden { display:none; }
 .apc-inst-card.apc-promo-hidden.visible { display:block; }
-.apc-inst-top { padding:10px 12px; background:#F2F2F7; border-radius:12px; }
+.apc-inst-top { padding:10px 12px; background:#F2F2F7; border-radius:12px; transition:transform .3s cubic-bezier(.34,1.56,.64,1); transform-origin:center; }
+.apc-inst-card.open .apc-inst-top { transform:scale(1.03); }
 .apc-inst-head { display:flex; align-items:center; justify-content:space-between; }
-.apc-inst-name { font-size:14px; font-weight:500; color:#1a1a1a; }
+.apc-inst-name { font-size:14px; font-weight:500; color:#1a1a1a; transition:transform .3s cubic-bezier(.34,1.56,.64,1); transform-origin:left center; display:inline-block; }
+.apc-inst-card.open .apc-inst-name { transform:scale(1.08); }
 .apc-inst-chevron { transition:transform 0.3s ease; flex-shrink:0; }
 .apc-inst-card.open .apc-inst-chevron { transform:rotate(90deg); }
 .apc-inst-tags { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
@@ -1621,13 +1628,18 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-inst-card.open .apc-inst-drawer { grid-template-rows:1fr; }
 .apc-inst-drawer-inner { overflow:hidden; min-height:0; }
 .apc-inst-body { margin-top:4px; padding:12px; background:#fff; border:1px solid #E5E5EA; border-radius:12px; }
-.apc-inst-grid-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #F2F2F7; font-size:13px; opacity:0; transform:translateX(-6px); }
-.apc-inst-card.open .apc-inst-grid-row { animation:apcStagger 0.4s forwards; }
-.apc-inst-card.open .apc-inst-grid-row:nth-child(1){ animation-delay:.1s; }
-.apc-inst-card.open .apc-inst-grid-row:nth-child(2){ animation-delay:.16s; }
-.apc-inst-card.open .apc-inst-grid-row:nth-child(3){ animation-delay:.22s; }
-.apc-inst-card.open .apc-inst-grid-row:nth-child(4){ animation-delay:.28s; }
-.apc-inst-card.open .apc-inst-sched-title,.apc-inst-card.open .apc-inst-comment-title { opacity:0; transform:translateX(-6px); animation:apcStagger 0.4s .3s forwards; }
+.apc-inst-grid-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #F2F2F7; font-size:13px; }
+.apc-inst-grid-row { opacity:0; transform:translateX(-6px); }
+.apc-inst-body > * { opacity:0; transform:translateX(-6px); }
+.apc-inst-card.open .apc-inst-body > * { animation:apcStagger 0.4s forwards; }
+.apc-inst-card.open .apc-inst-body > *:nth-child(1){ animation-delay:.08s; }
+.apc-inst-card.open .apc-inst-body > *:nth-child(2){ animation-delay:.14s; }
+.apc-inst-card.open .apc-inst-body > *:nth-child(3){ animation-delay:.20s; }
+.apc-inst-card.open .apc-inst-body > *:nth-child(4){ animation-delay:.26s; }
+.apc-inst-card.open .apc-inst-body > *:nth-child(5){ animation-delay:.32s; }
+.apc-inst-card.open .apc-inst-body > *:nth-child(6){ animation-delay:.38s; }
+.apc-inst-card.open .apc-inst-body > *:nth-child(7){ animation-delay:.44s; }
+.apc-inst-card.open .apc-inst-body > *:nth-child(8){ animation-delay:.50s; }
 .apc-inst-grid-row:last-child { border-bottom:none; }
 .apc-inst-grid-lbl { color:#8E8E93; }
 .apc-inst-grid-val { font-weight:500; color:#1a1a1a; }

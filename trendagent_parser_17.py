@@ -1,3 +1,4 @@
+# ACTUAL VERSION: v17 (source: trendagent_parser_17.py)
 #!/usr/bin/env python3
 """
 Парсер TrendAgent — квартиры + планировки + рендеры ЖК
@@ -838,9 +839,13 @@ def parse_jk_data(driver, jk_name: str, url: str, block_id_hint: str = "") -> di
                 });
                 return result;
             """) or []
-            imgs_total = sum(1 for f in features if 'img' in f)
+            imgs_total = sum(1 for f in features if f.get('img') is not None or 'img' in f)
             imgs_ok    = sum(1 for f in features if f.get('img'))
-            if not features or imgs_ok == imgs_total or _feat_wait == 7:
+            # Выходим если: карточки есть и все возможные картинки загрузились,
+            # либо таймаут. Если карточек ещё нет — ЖДЁМ (блок мог не загрузиться).
+            if features and imgs_ok == imgs_total:
+                break
+            if _feat_wait == 7:
                 break
             time.sleep(1)
         result["features"] = features
@@ -1159,13 +1164,16 @@ def save_jk_data(jk_name: str, data: dict):
             pass
     # Обновляем данные для ЖК.
     # Защита: не затираем непустые about/features пустыми или "обеднёнными" (без картинок)
+    import sys as _sys
+    _force = "--force" in _sys.argv
     old = all_data.get(jk_name, {})
     def _img_count(feats):
         return sum(1 for f in (feats or []) if isinstance(f, dict) and f.get('img'))
-    if old.get('about') and not data.get('about'):
-        data['about'] = old['about']
-    if old.get('features') and _img_count(data.get('features')) < _img_count(old.get('features')):
-        data['features'] = old['features']
+    if not _force:
+        if old.get('about') and not data.get('about'):
+            data['about'] = old['about']
+        if old.get('features') and _img_count(data.get('features')) < _img_count(old.get('features')):
+            data['features'] = old['features']
     all_data[jk_name] = data
     # Сохраняем локально
     JK_DATA_FILE.write_text(json.dumps(all_data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -1893,8 +1901,9 @@ def main():
                     renders_downloaded.append((jk_name, n))
                     u = upload_renders_to_s3(jk_name)
                     print(f"  [☁] {jk_name}: {u} фото → S3")
-                    save_jk_data(jk_name, jk_data)
-                    print(f"  [📋] {jk_name}: данные ЖК → json")
+                    # save_jk_data здесь НЕ вызываем: данные нового ЖК уже сохранены
+                    # в шаге 4.6, а переменная jk_data тут содержала бы данные
+                    # ПОСЛЕДНЕГО спарсенного ЖК (баг: чужие данные у нового ЖК)
                 else:
                     # Показываем похожие варианты из списка
                     jk_tr = translit(jk_name.lower())
@@ -2068,7 +2077,14 @@ if __name__ == "__main__":
                         return result;
                     """) or []
                     got = sum(1 for f in features if f.get('img'))
-                    if not features or got == len(features) or _w == 7:
+                    # Карточки есть и у всех есть картинки — готово.
+                    # Карточек нет — ждём (блок мог ещё не загрузиться).
+                    # Карточки есть, но часть без img — даём ещё пару секунд и принимаем как есть.
+                    if features and got == len(features):
+                        break
+                    if features and _w >= 3:
+                        break
+                    if _w == 7:
                         break
                     time.sleep(1)
                 got = sum(1 for f in features if f.get('img'))

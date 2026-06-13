@@ -1,4 +1,5 @@
 # ACTUAL VERSION: v17 (source: trendagent_parser_17.py)
+# ACTUAL VERSION: v17 (source: trendagent_parser_17.py)
 #!/usr/bin/env python3
 """
 Парсер TrendAgent — квартиры + планировки + рендеры ЖК
@@ -1059,6 +1060,18 @@ def parse_jk_data(driver, jk_name: str, url: str, block_id_hint: str = "") -> di
             data = _json.loads(resp.text)
             programs = data.get("data", {}).get("results", [])
 
+            # Дамп сырого ответа (режим --dump-mortgage)
+            import sys as _sys
+            if "--dump-mortgage" in _sys.argv:
+                try:
+                    with open("mortgage_raw_dump.json", "w", encoding="utf-8") as _f:
+                        _json.dump(data, _f, ensure_ascii=False, indent=2)
+                    print(f"  [DUMP] сырой JSON ипотеки -> mortgage_raw_dump.json ({len(programs)} программ)")
+                    if programs:
+                        print("  [DUMP] ключи первой программы:", list(programs[0].keys()))
+                except Exception as _e:
+                    print(f"  [DUMP] ошибка: {_e}")
+
             # Собираем все уникальные программы
             seen = set()
             mortgage = []
@@ -2001,6 +2014,30 @@ if __name__ == "__main__":
         else:
             print("[!] Укажите ЖК и номер: --reset-layout \"Вилла Марина\" 15")
             sys.exit(1)
+
+    if "--dump-mortgage" in sys.argv:
+        idx = sys.argv.index("--dump-mortgage")
+        if idx + 1 >= len(sys.argv):
+            print('[!] Укажите ЖК: --dump-mortgage "Парусная 1"')
+            sys.exit(1)
+        target_jk = sys.argv[idx + 1]
+        driver = get_driver()
+        try:
+            ensure_auth(driver)
+            all_links = get_object_links(driver)
+            name, url = find_jk_link(target_jk, all_links)
+            if not url:
+                print(f"[!] ЖК не найден: {target_jk}")
+                sys.exit(1)
+            print(f"[•] Дамп ипотеки: {target_jk} -> {url}")
+            driver.get(url)
+            wait_for_page_ready(driver)
+            time.sleep(2)
+            parse_jk_data(driver, target_jk, url)
+            print("[✓] Готово. Смотри mortgage_raw_dump.json")
+        finally:
+            driver.quit()
+        sys.exit(0)
 
     if "--fix-features" in sys.argv:
         # Перепарсит ТОЛЬКО about/features у ЖК где нет картинок в features

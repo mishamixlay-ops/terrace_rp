@@ -1,0 +1,2780 @@
+{
+  "errors": null,
+  "data": {
+    "defaults": {
+      "module": "mortgage",
+      "params": {
+        "rate": "22.3"
+      }
+    },
+    "results": [
+      {
+        "bank": {
+          "logo": {
+            "file_name": "ebb909fd3a23d09e10031c8f898e6c30.png",
+            "path": "55/vx/"
+          },
+          "logo_square": {
+            "file_name": "c48c1a1aae0fe9c8b9c755192f4aa0af.png",
+            "path": "dn/xr/"
+          },
+          "_id": "58c665588b6aa52311afa045",
+          "priority": 800,
+          "name": "Абсолют Банк (ПАО)"
+        },
+        "_id": "5983801dd07ed144bb7cca3d",
+        "crm_id": "36",
+        "name": "Новостройка (19.5%) — Абсолют Банк (ПВ20)",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 19.5,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69fd953a14bbb6b1ce658194"
+          },
+          "max": null,
+          "min": 19.5,
+          "insurance": 4
+        },
+        "period": 22,
+        "firstpay": 20.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 19.5,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69fd953a14bbb6b1ce658194"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; При отказе от страхования жизни +1,00%<br>&bull; При отказе от страхования титула +1,00%<br>&bull; При коллективном страховании банка -0,50%</p>",
+        "updated_at": "2026-05-08T07:48:10.319Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "ebb909fd3a23d09e10031c8f898e6c30.png",
+            "path": "55/vx/"
+          },
+          "logo_square": {
+            "file_name": "c48c1a1aae0fe9c8b9c755192f4aa0af.png",
+            "path": "dn/xr/"
+          },
+          "_id": "58c665588b6aa52311afa045",
+          "priority": 800,
+          "name": "Абсолют Банк (ПАО)"
+        },
+        "_id": "61a5f049e4931e7f2606cae4",
+        "crm_id": "uaqlwhpm0f",
+        "name": "Семейная (5.75%) — Абсолют Банк (ПВ20)",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 5.75,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69b4298414bbb6b1ce605234"
+          },
+          "max": null,
+          "min": 5.75,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 5.75,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69b4298414bbb6b1ce605234"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; При отказе от страхования жизни +1,00%<br>&bull; При комплексном страховании от банка ПВ 20,01% и ставка 5,75%<br>&bull; При страховании в аккредитованной компании ПВ 50,01% и ставка 6,00%</p>",
+        "updated_at": "2026-03-13T15:13:08.221Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "76a5379a9ef661ebfaa6e9df0d4a8da7.png",
+            "path": "5m/s3/"
+          },
+          "logo_square": {
+            "file_name": "e4ebea6fb114bca3e6dad65d6c2c7e82.png",
+            "path": "xv/rd/"
+          },
+          "_id": "59db3a6b5d506d1e560f402c",
+          "priority": 990,
+          "name": "Альфа-Банк (АО)"
+        },
+        "_id": "59db3c225d506d1e560f4075",
+        "crm_id": "ldahvenk50",
+        "name": "Новостройка (19.49%) — Альфа-Банк (ПВ50) (до 10 млн)",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 19.49,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 19.49,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 50.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 19.49,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p><strong>Дисконты:</strong></p>\n<p>Payroll/ APrivate - 0,6% (зп клиент / премиум клиент)<br><br><strong>Первичный рынок:&nbsp;</strong><br>Без страхования жизни +0,7%<br>Ограничение по сроку действия решения &ndash; 3 мес &nbsp; &nbsp;&nbsp;</p>\n<p><strong>Вторичный рынок:&nbsp;</strong><br>Без страхования жизни +0,7%<br>Без страхования титула +0,3%<br>Ограничение по сроку действия решения &ndash; 3 мес</p>\n<p>16.03-30.06 Дисконт \"Быстрый выход на сделку: - 0,40%</p>",
+        "updated_at": "2026-06-08T10:54:14.507Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "76a5379a9ef661ebfaa6e9df0d4a8da7.png",
+            "path": "5m/s3/"
+          },
+          "logo_square": {
+            "file_name": "e4ebea6fb114bca3e6dad65d6c2c7e82.png",
+            "path": "xv/rd/"
+          },
+          "_id": "59db3a6b5d506d1e560f402c",
+          "priority": 990,
+          "name": "Альфа-Банк (АО)"
+        },
+        "_id": "68ff4f8bfeb190501e071068",
+        "crm_id": "yil6drxt7u",
+        "name": "Семейная (6%) - Альфа-банк (ПВ20)",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 6,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li><span data-sheets-root=\"1\">Без страхования жизни +1,0% (на первый год страхование обязательно)&nbsp;<br></span></li>\n</ul>",
+        "updated_at": "2026-03-18T07:45:00.895Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "76a5379a9ef661ebfaa6e9df0d4a8da7.png",
+            "path": "5m/s3/"
+          },
+          "logo_square": {
+            "file_name": "e4ebea6fb114bca3e6dad65d6c2c7e82.png",
+            "path": "xv/rd/"
+          },
+          "_id": "59db3a6b5d506d1e560f402c",
+          "priority": 990,
+          "name": "Альфа-Банк (АО)"
+        },
+        "_id": "6a10177714bbb6b1ce68fc5b",
+        "crm_id": "eMlmdml7ln",
+        "name": "Семейная (3.7%) — Альфа-Банк (ГК ТРЕСТ)",
+        "type": "670674312581253574cf1868",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 3.7,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a10199f14bbb6b1ce69000e"
+          },
+          "max": null,
+          "min": 3.7,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 3.7,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a10199f14bbb6b1ce69000e"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "updated_at": "2026-05-22T08:53:51.586Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "76a5379a9ef661ebfaa6e9df0d4a8da7.png",
+            "path": "5m/s3/"
+          },
+          "logo_square": {
+            "file_name": "e4ebea6fb114bca3e6dad65d6c2c7e82.png",
+            "path": "xv/rd/"
+          },
+          "_id": "59db3a6b5d506d1e560f402c",
+          "priority": 990,
+          "name": "Альфа-Банк (АО)"
+        },
+        "_id": "6a10194714bbb6b1ce68ff1c",
+        "crm_id": "sGKpCLyn3i",
+        "name": "Субсидирование (11.6%) — Альфа-Банк (ГК ТРЕСТ.СПБ)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 11.6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a10194714bbb6b1ce68ff1d"
+          },
+          "max": null,
+          "min": 11.6,
+          "insurance": 0
+        },
+        "period": 10,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 11.6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a10194714bbb6b1ce68ff1d"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "updated_at": "2026-05-22T08:52:23.935Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "76a5379a9ef661ebfaa6e9df0d4a8da7.png",
+            "path": "5m/s3/"
+          },
+          "logo_square": {
+            "file_name": "e4ebea6fb114bca3e6dad65d6c2c7e82.png",
+            "path": "xv/rd/"
+          },
+          "_id": "59db3a6b5d506d1e560f402c",
+          "priority": 990,
+          "name": "Альфа-Банк (АО)"
+        },
+        "_id": "6a1019d014bbb6b1ce690087",
+        "crm_id": "n2ZgDrLzgW",
+        "name": "Субсидирование (12.99%) — Альфа-Банк (ГК ТРЕСТ.СПБ)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 12.99,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 12.99,
+          "insurance": 0
+        },
+        "period": 15,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 12.99,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "updated_at": "2026-06-02T10:31:42.529Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "76a5379a9ef661ebfaa6e9df0d4a8da7.png",
+            "path": "5m/s3/"
+          },
+          "logo_square": {
+            "file_name": "e4ebea6fb114bca3e6dad65d6c2c7e82.png",
+            "path": "xv/rd/"
+          },
+          "_id": "59db3a6b5d506d1e560f402c",
+          "priority": 990,
+          "name": "Альфа-Банк (АО)"
+        },
+        "_id": "6a1019e014bbb6b1ce6900ab",
+        "crm_id": "wGi26PfcTH",
+        "name": "Субсидирование (12.99%) — Альфа-Банк (ГК ТРЕСТ.СПБ)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 12.99,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a1019e014bbb6b1ce6900ac"
+          },
+          "max": null,
+          "min": 12.99,
+          "insurance": 0
+        },
+        "period": 20,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 12.99,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a1019e014bbb6b1ce6900ac"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "updated_at": "2026-05-22T08:54:56.155Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "76a5379a9ef661ebfaa6e9df0d4a8da7.png",
+            "path": "5m/s3/"
+          },
+          "logo_square": {
+            "file_name": "e4ebea6fb114bca3e6dad65d6c2c7e82.png",
+            "path": "xv/rd/"
+          },
+          "_id": "59db3a6b5d506d1e560f402c",
+          "priority": 990,
+          "name": "Альфа-Банк (АО)"
+        },
+        "_id": "6a1019ef14bbb6b1ce6900cd",
+        "crm_id": "Frg2yAHwhO",
+        "name": "Субсидирование (13.89%) — Альфа-Банк (ГК ТРЕСТ.СПБ)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 13.89,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a1019ef14bbb6b1ce6900ce"
+          },
+          "max": null,
+          "min": 13.89,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 13.89,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a1019ef14bbb6b1ce6900ce"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "updated_at": "2026-05-22T08:55:11.424Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "375be71ed8aec3425e3a70b408d10b20.png",
+            "path": "24/cz/"
+          },
+          "logo_square": {
+            "file_name": "d4797b2da685a5cf9fdf310a8dc520ed.png",
+            "path": "o8/ay/"
+          },
+          "_id": "58c665588b6aa52311afa044",
+          "priority": 950,
+          "name": "Банк ПСБ (ПАО)"
+        },
+        "_id": "5b34ddf60c5b9c01fc2efe89",
+        "crm_id": "c0odn69l5p",
+        "name": "Военная ипотека (18,5% - Мах: 2 190 000 руб.) — Промсвязьбанк (ВИ) (ПВ0)",
+        "type": "5983801cd07ed144bb7cca30",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 18.5,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a042aa414bbb6b1ce661c4d"
+          },
+          "max": null,
+          "min": 18.5,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 0,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 18.5,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a042aa414bbb6b1ce661c4d"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 2190000,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; Требуется НИС<br>&bull; Для зарплатных клиентов -1,00%&nbsp;<br>&bull; Максимальная сумма кредита 2 070 000 руб для внешних клиентов<br>&bull; Максимальная сумма кредита 2 190 000 руб для зарплатных клиентов</p>",
+        "updated_at": "2026-05-13T07:39:16.002Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "375be71ed8aec3425e3a70b408d10b20.png",
+            "path": "24/cz/"
+          },
+          "logo_square": {
+            "file_name": "d4797b2da685a5cf9fdf310a8dc520ed.png",
+            "path": "o8/ay/"
+          },
+          "_id": "58c665588b6aa52311afa044",
+          "priority": 950,
+          "name": "Банк ПСБ (ПАО)"
+        },
+        "_id": "675c46ae4fc8c0335828cdd3",
+        "crm_id": "9auoy4go9e",
+        "name": "Военная Семейная ипотека (6% - Мах: 5 330 000 руб.) — Промсвязьбанк (ВИ) (ПВ20)",
+        "type": "670674312581253574cf186c",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 6,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "maximum_loan_amount": 5330000,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; Максимальная сумма кредита 5 330 000 руб</p>",
+        "updated_at": "2026-01-14T14:56:06.011Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "e82a349bedcd906652ed88c7350129ce.png",
+            "path": "nc/2i/"
+          },
+          "logo_square": {
+            "file_name": "b091d115fe29dcd11ee6fedd5b9ea351.png",
+            "path": "lx/nz/"
+          },
+          "_id": "58c665588b6aa52311afa03c",
+          "priority": 940,
+          "name": "Банк Санкт-Петербург (ПАО)"
+        },
+        "_id": "61a4f531d625d09fb57f2af1",
+        "crm_id": "bv1frutl2o",
+        "name": "Семейная (6%) — БСПБ",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 6,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; При отказе от страхования жизни +1,00%</p>",
+        "updated_at": "2026-01-15T15:38:57.554Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "e82a349bedcd906652ed88c7350129ce.png",
+            "path": "nc/2i/"
+          },
+          "logo_square": {
+            "file_name": "b091d115fe29dcd11ee6fedd5b9ea351.png",
+            "path": "lx/nz/"
+          },
+          "_id": "58c665588b6aa52311afa03c",
+          "priority": 940,
+          "name": "Банк Санкт-Петербург (ПАО)"
+        },
+        "_id": "675c14eb4fc8c0272c27346a",
+        "crm_id": "39ahzg5e88",
+        "name": "Новостройка (17.99%) — БСПБ (ПВ20)",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 17.99,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69f853ff14bbb6b1ce640c83"
+          },
+          "max": null,
+          "min": 17.99,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": true,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 17.99,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69f853ff14bbb6b1ce640c83"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; Для зарплатных клиентов, сотрудников банка, VIP/Premium клиентов -0,50%<br>&bull; Для будущих зарплатных клиентов -0,50%<br>&bull; При сумме кредита от 15 млн руб ПВ от 30,01%<br>&bull; При отказе от страхования жизни +1,00%<br>&bull; При отказе от страхования титула +1,00%<br>&bull; При отказе от страхования имущества +1,00%<br>&bull; При сумме кредита от 5 млн руб -0,5%<br>&bull; При ПВ от 50% -0,5%</p>\n<p>&nbsp;</p>",
+        "updated_at": "2026-05-04T08:08:31.590Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "67eba9405623458b3a9b1c10",
+        "crm_id": "6w1fc4rn02",
+        "name": "Новостройка (19.4%) — ВТБ (ПВ20)",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 19.4,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a06d38c14bbb6b1ce66ccee"
+          },
+          "max": null,
+          "min": 19.4,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 19.4,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a06d38c14bbb6b1ce66ccee"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; При отказе от страхования +1,0%<br>&bull; Для зарплатных клиентов -0,40%&nbsp;<br>&bull; Для будущих зарплатных клиентов -0,40% - при отсутствии перехода на зарплатный проект Банка &nbsp;в течение 3 мес. с даты заключения КД, ставка повышается на 0,5% &nbsp; &nbsp;</p>",
+        "updated_at": "2026-05-15T08:04:28.740Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "6877b61e7aa10a7bcaa4d59f",
+        "crm_id": "leew4i1uw5",
+        "name": "Семейная (4.6%) - ВТБ (ГК Трест)",
+        "type": "670674312581253574cf1868",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 4.6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 4.6,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 4.6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li>Дата окончания акции 01.07.2026</li>\n</ul>",
+        "updated_at": "2026-06-02T10:34:02.828Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "6877b65dca252141a9f0227f",
+        "crm_id": "b4uoitct51",
+        "name": "Семейная (2.2% до ввода в эксплуатацию, далее 6%) - ВТБ (ГК Трест)",
+        "type": "670674312581253574cf1868",
+        "rate": {
+          "type": "variable",
+          "periods": {
+            "first_period": {
+              "rate_min": 2.2,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": 6
+            },
+            "second_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 2.2,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "variable",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 2.2,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": 6
+          },
+          "second_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li>Ставка 2,2% до РнВ (31.12.2026), далее 6%&nbsp;</li>\n<li>Дата окончания акции 01.07.2026</li>\n</ul>",
+        "updated_at": "2026-06-02T15:35:14.974Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "6877b717ca25215020f02462",
+        "crm_id": "yauiqf5v45",
+        "name": "Семейная (3.5% до ввода в эксплуатацию + 2 года, далее 6%) - ВТБ (ГК Трест)",
+        "type": "670674312581253574cf1868",
+        "rate": {
+          "type": "variable",
+          "periods": {
+            "first_period": {
+              "rate_min": 3.5,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": 30
+            },
+            "second_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 3.5,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "variable",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 3.5,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": 30
+          },
+          "second_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li>Ставка 3,5% до РнВ (31.12.2026) + 2 года, далее 6%</li>\n<li>Дата окончания акции 01.07.2026</li>\n</ul>",
+        "updated_at": "2026-06-02T15:35:19.255Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "688b674c10ae081f28732338",
+        "crm_id": "myt3a6et6k",
+        "name": "Семейная (6%) — ВТБ (ПФ) (ПВ20)",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 6,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "comment": null,
+        "updated_at": "2025-12-09T08:05:51.860Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "68d160f1b83e3b1031ba4a82",
+        "crm_id": "nwiabu79eb",
+        "name": "Субсидирование (15.15%) — ВТБ (ГК Трест)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 15.15,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a101bc114bbb6b1ce69042b"
+          },
+          "max": null,
+          "min": 15.15,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 30.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 15.15,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a101bc114bbb6b1ce69042b"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 100000000,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li>Для зарплатных клиентов банка ПВ 20,1%</li>\n<li>Дата окончания акции 01.07.2026</li>\n</ul>",
+        "updated_at": "2026-05-22T09:02:57.692Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "68d161ebb83e3b7827ba4db3",
+        "crm_id": "6375s5622w",
+        "name": "Субсидирование (5.4% до РнВ , далее 19.4%) — ВТБ (ГК Трест)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "variable",
+          "periods": {
+            "first_period": {
+              "rate_min": 5.4,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": 6
+            },
+            "second_period": {
+              "rate_min": 19.4,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 5.4,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 30.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "variable",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 5.4,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": 6
+          },
+          "second_period": {
+            "rate_min": 19.4,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 100000000,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li>Ставка 5,4% до РнВ (31.12.2026 г.), далее 19,4%</li>\n<li>Для зарплатных клиентов банка ПВ 20,1%</li>\n<li>Дата окончания акции 01.07.2026</li>\n</ul>",
+        "updated_at": "2026-06-02T15:35:02.731Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "68d1620efc1d973632c4ff90",
+        "crm_id": "qvhm9avtcp",
+        "name": "Субсидирование (13.5% до ввода  в эксплуатацию + 2 года, далее 19.4%) — ВТБ (ГК Трест)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "variable",
+          "periods": {
+            "first_period": {
+              "rate_min": 13.5,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": 30
+            },
+            "second_period": {
+              "rate_min": 19.4,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 13.5,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 30.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "variable",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 13.5,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": 30
+          },
+          "second_period": {
+            "rate_min": 19.4,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 100000000,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li>Ставка 13,5% до РнВ (31.12.2026 г.) + 2 года, далее 19,4%</li>\n<li>Для зарплатных клиентов банка ПВ 20,1%</li>\n<li>Дата окончания акции 01.07.2026</li>\n</ul>",
+        "updated_at": "2026-06-02T15:35:09.173Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "6a101c9714bbb6b1ce6905df",
+        "crm_id": "wl9y8pwvzS",
+        "name": "Субсидирование (13.9%) — ВТБ (ГК Трест)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 13.9,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a101c9714bbb6b1ce6905e0"
+          },
+          "max": null,
+          "min": 13.9,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 13.9,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a101c9714bbb6b1ce6905e0"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "updated_at": "2026-05-22T09:06:31.607Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc41aa89952e7c9d977555a5a54c5433.png",
+            "path": "x1/sd/"
+          },
+          "logo_square": {
+            "file_name": "581bd1dd4ae885d17adeff4e0d19907c.png",
+            "path": "qg/wq/"
+          },
+          "_id": "58c665588b6aa52311afa058",
+          "priority": 980,
+          "name": "ВТБ (ПАО) "
+        },
+        "_id": "6a101cc314bbb6b1ce69066e",
+        "crm_id": "NjtekVCIPc",
+        "name": "Семейная (4.1%) — ВТБ (ГК Трест)",
+        "type": "670674312581253574cf1868",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 4.1,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 4.1,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 40.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 4.1,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "updated_at": "2026-06-02T10:33:11.186Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "b3a0744bcc870d42c1c464e061a78eec.png",
+            "path": "87/s5/"
+          },
+          "logo_square": {
+            "file_name": "fcef71850950bb2055209ba61a65375d.png",
+            "path": "iz/5m/"
+          },
+          "_id": "59ca4b3f4e6dd00b58147376",
+          "priority": 940,
+          "name": "ДОМ.РФ (АО)"
+        },
+        "_id": "61a5f7ecd625d085f87f80af",
+        "crm_id": "n8xs853xca",
+        "name": "Семейная (6%) — ДОМ РФ (ПВ20)",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 6,
+              "rate_max": 6,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69ef71a114bbb6b1ce63388a"
+          },
+          "max": 6,
+          "min": 6,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 6,
+            "rate_max": 6,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69ef71a114bbb6b1ce63388a"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; При отказе от страхования жизни +1,00%</p>",
+        "updated_at": "2026-04-27T14:24:33.242Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "b3a0744bcc870d42c1c464e061a78eec.png",
+            "path": "87/s5/"
+          },
+          "logo_square": {
+            "file_name": "fcef71850950bb2055209ba61a65375d.png",
+            "path": "iz/5m/"
+          },
+          "_id": "59ca4b3f4e6dd00b58147376",
+          "priority": 940,
+          "name": "ДОМ.РФ (АО)"
+        },
+        "_id": "6419a65a27a6ff2ab3d67bf3",
+        "crm_id": "fauvbv0ltl",
+        "name": "Семейная (5.5%) - ДОМ.РФ (Строительный Трест)",
+        "type": "670674312581253574cf1868",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 5.5,
+              "rate_max": 5.5,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": 5.5,
+          "min": 5.5,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 5.5,
+            "rate_max": 5.5,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "comment": null,
+        "updated_at": "2025-09-16T16:50:08.821Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fc49d577d22ecded5df964edaf2fae54.png",
+            "path": "v2/c8/"
+          },
+          "logo_square": {
+            "file_name": "00766148a3c9740b3439299bbcb9223e.jpg",
+            "path": "i7/34/"
+          },
+          "_id": "58c665588b6aa52311afa049",
+          "priority": 690,
+          "name": "Россельхозбанк (АО)"
+        },
+        "_id": "61a5f2f4e4931e516f06ccaa",
+        "crm_id": "5uidr27e13",
+        "name": "Семейная (6%) — Россельхозбанк (ПВ30)",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "698deb4f6428f3dfc583005e"
+          },
+          "max": null,
+          "min": 6,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 30,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "698deb4f6428f3dfc583005e"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; При отказе от страхования жизни +1,00%</p>\n<p>&bull; Для объектов на ПФ Банка ПВ 20,01%</p>",
+        "updated_at": "2026-02-12T15:01:35.576Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "bc807928c81401a8fe85aa653d5e344f.png",
+            "path": "eb/ce/"
+          },
+          "logo_square": {
+            "file_name": "7d717acec7cb233023e9b95ee7330c4d.png",
+            "path": "3l/cg/"
+          },
+          "_id": "58c665588b6aa52311afa04b",
+          "priority": 685,
+          "name": "Россия (АБ АО)"
+        },
+        "_id": "5983801dd07ed144bb7cca49",
+        "crm_id": "54",
+        "name": "Военная ипотека (17.5% - Мах: 2 381 000 руб.) — Банк Россия (ВИ) (ПВ30.01)",
+        "type": "5983801cd07ed144bb7cca30",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 17.5,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 17.5,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 30.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 17.5,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 2381000,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; Для зарплатных клиентов ПВ 20,01%<br><br></p>",
+        "updated_at": "2026-05-28T07:49:36.359Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "bc807928c81401a8fe85aa653d5e344f.png",
+            "path": "eb/ce/"
+          },
+          "logo_square": {
+            "file_name": "7d717acec7cb233023e9b95ee7330c4d.png",
+            "path": "3l/cg/"
+          },
+          "_id": "58c665588b6aa52311afa04b",
+          "priority": 685,
+          "name": "Россия (АБ АО)"
+        },
+        "_id": "675c44999b7f211e8faf1316",
+        "crm_id": "z95hm85axw",
+        "name": "Военная семейная  ипотека (5,8% - Max 5 525 000 руб) — Банк Россия (ПВ20.01)",
+        "type": "670674312581253574cf186c",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 5.8,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 5.8,
+          "insurance": 0
+        },
+        "period": 20,
+        "firstpay": 20.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 5.8,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 5525000,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; Для ЗП - 0,2%</p>",
+        "updated_at": "2026-06-08T10:57:28.592Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "33b4b564b36c351684923632cc0a8de9.png",
+            "path": "w5/dy/"
+          },
+          "logo_square": {
+            "file_name": "53c6972052de844a6922cdd274a8d43b.png",
+            "path": "zm/wb/"
+          },
+          "_id": "58c665588b6aa52311afa03b",
+          "priority": 1000,
+          "name": "Сбербанк (ПАО)"
+        },
+        "_id": "5983801dd07ed144bb7cca5b",
+        "crm_id": "1",
+        "name": "Новостройка (21.70%) — Сбербанк (ПВ20)",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 21.7,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69fd9fce14bbb6b1ce658e7e"
+          },
+          "max": null,
+          "min": 21.7,
+          "insurance": 1
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 21.7,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69fd9fce14bbb6b1ce658e7e"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p><span data-sheets-root=\"1\">&bull; </span>Дисконт для держателей зарплатной карты 1,00%<br><span data-sheets-root=\"1\">&bull;</span> Дисконт для сотрудников банка 1,50%<br><span data-sheets-root=\"1\">&bull;</span> При отказе от страхования жизни +1,00%</p>",
+        "updated_at": "2026-05-08T08:33:18.107Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "33b4b564b36c351684923632cc0a8de9.png",
+            "path": "w5/dy/"
+          },
+          "logo_square": {
+            "file_name": "53c6972052de844a6922cdd274a8d43b.png",
+            "path": "zm/wb/"
+          },
+          "_id": "58c665588b6aa52311afa03b",
+          "priority": 1000,
+          "name": "Сбербанк (ПАО)"
+        },
+        "_id": "675c045f9b7f2168d0ad3360",
+        "crm_id": "w280v0dcmh",
+        "name": "Новостройка (19.50%) — Сбербанк (ПВ50)",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 19.5,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69ef1d8914bbb6b1ce630c83"
+          },
+          "max": null,
+          "min": 19.5,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 50.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 19.5,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69ef1d8914bbb6b1ce630c83"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p><span data-sheets-root=\"1\">&bull;</span> Дисконт для держателей зарплатной карты 1,00%<br><span data-sheets-root=\"1\">&bull;</span> Дисконт для сотрудников банка 1,50%<br><span data-sheets-root=\"1\">&bull;</span> При отказе от страхования жизни +1,00%</p>",
+        "updated_at": "2026-04-27T08:25:45.228Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "33b4b564b36c351684923632cc0a8de9.png",
+            "path": "w5/dy/"
+          },
+          "logo_square": {
+            "file_name": "53c6972052de844a6922cdd274a8d43b.png",
+            "path": "zm/wb/"
+          },
+          "_id": "58c665588b6aa52311afa03b",
+          "priority": 1000,
+          "name": "Сбербанк (ПАО)"
+        },
+        "_id": "67d19ff9a1a42d6e81268b30",
+        "crm_id": "w1rz6vi1e8",
+        "name": "Семейная (6.00%) — Сбербанк (ПВ30)",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69ef712a14bbb6b1ce6337ad"
+          },
+          "max": null,
+          "min": 6,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 30.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69ef712a14bbb6b1ce6337ad"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; ПВ 20,10% при условии: ИЖС, Сверх-лимит, объект на ПФ или эскроу открыт в банке<br>&bull; При отказе от страхования жизни +1,00%</p>",
+        "updated_at": "2026-04-27T14:22:34.127Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "33b4b564b36c351684923632cc0a8de9.png",
+            "path": "w5/dy/"
+          },
+          "logo_square": {
+            "file_name": "53c6972052de844a6922cdd274a8d43b.png",
+            "path": "zm/wb/"
+          },
+          "_id": "58c665588b6aa52311afa03b",
+          "priority": 1000,
+          "name": "Сбербанк (ПАО)"
+        },
+        "_id": "68663c604b522418e6e1fe1a",
+        "crm_id": "uut6b8z5rq",
+        "name": "Новостройка (20.20%) — Сбербанк (ПВ30)",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 20.2,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69ef1db714bbb6b1ce630c9d"
+          },
+          "max": null,
+          "min": 20.2,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 30.1,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 20.2,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69ef1db714bbb6b1ce630c9d"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": "<p><span data-sheets-root=\"1\">&bull; </span>Дисконт для держателей зарплатной карты 1,00%<br><span data-sheets-root=\"1\">&bull;</span> Дисконт для сотрудников банка 1,50%<br><span data-sheets-root=\"1\">&bull;</span> При отказе от страхования жизни +1,00%</p>",
+        "updated_at": "2026-04-27T08:26:31.332Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "33b4b564b36c351684923632cc0a8de9.png",
+            "path": "w5/dy/"
+          },
+          "logo_square": {
+            "file_name": "53c6972052de844a6922cdd274a8d43b.png",
+            "path": "zm/wb/"
+          },
+          "_id": "58c665588b6aa52311afa03b",
+          "priority": 1000,
+          "name": "Сбербанк (ПАО)"
+        },
+        "_id": "6a0ef0ec14bbb6b1ce68a642",
+        "crm_id": "K9eUJSOp8Z",
+        "name": "Субсидирование (16.2%) — Сбербанк (ГК Трест)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 16.2,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a10184c14bbb6b1ce68fdc1"
+          },
+          "max": null,
+          "min": 16.2,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 16.2,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a10184c14bbb6b1ce68fdc1"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li>Для ЗП клиентов дисконт 1%</li>\n</ul>",
+        "updated_at": "2026-05-22T08:48:12.728Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "33b4b564b36c351684923632cc0a8de9.png",
+            "path": "w5/dy/"
+          },
+          "logo_square": {
+            "file_name": "53c6972052de844a6922cdd274a8d43b.png",
+            "path": "zm/wb/"
+          },
+          "_id": "58c665588b6aa52311afa03b",
+          "priority": 1000,
+          "name": "Сбербанк (ПАО)"
+        },
+        "_id": "6a0ef18b14bbb6b1ce68a6fb",
+        "crm_id": "LXhMgBJCjF",
+        "name": "Семейная (4%) — Сбербанк (ГК Трест)",
+        "type": "670674312581253574cf1868",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 4,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "6a10186a14bbb6b1ce68fded"
+          },
+          "max": null,
+          "min": 4,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 30.1,
+        "guarantor": false,
+        "is_price_increase_possible": true,
+        "is_price_increase_unknown": false,
+        "price_increase_calculated_from": "base",
+        "how_price_increase_calculated": "discount",
+        "dimension_of_price_increase": "percentages",
+        "increase_in_price": 5,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 4,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "6a10186a14bbb6b1ce68fded"
+        },
+        "according_to_two_documents": false,
+        "maximum_loan_amount": 12000000,
+        "calculator_not_available": false,
+        "comment": "<ul>\n<li>Для ЗП клиентов дисконт 1%</li>\n</ul>",
+        "updated_at": "2026-05-22T08:48:42.835Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "492b1c8051b822abb2554955bfa994cc.png",
+            "path": "ic/ok/"
+          },
+          "logo_square": {
+            "file_name": "2fb1453e3943a0c77da295600e5fcb59.png",
+            "path": "p7/zh/"
+          },
+          "_id": "5aaa6a2bbefcdf11383e0921",
+          "priority": 970,
+          "name": "Совкомбанк (ПАО)"
+        },
+        "_id": "6760bef69b7f21587fb57a46",
+        "crm_id": "imxz67vwg4",
+        "name": "Субсидирование (12.99% на 90 мес., далее 26.49%) - Совкомбанк (Группа Компаний Трест)",
+        "type": "613a29d58c67b73c38a6b1ce",
+        "rate": {
+          "type": "variable",
+          "periods": {
+            "first_period": {
+              "rate_min": 12.99,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": 90
+            },
+            "second_period": {
+              "rate_min": 26.49,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 12.99,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 50,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "variable",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 12.99,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": 90
+          },
+          "second_period": {
+            "rate_min": 26.49,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "maximum_loan_amount": 30000000,
+        "calculator_not_available": false,
+        "comment": null,
+        "updated_at": "2024-12-19T16:42:19.597Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "5270d5cb05533d2de9863cacfae0d4d1.png",
+            "path": "0k/rm/"
+          },
+          "logo_square": {
+            "file_name": "95efbfbfeee9d686100ac56183c1831b.png",
+            "path": "r3/eq/"
+          },
+          "_id": "58c665588b6aa52311afa042",
+          "priority": 910,
+          "name": "Уралсиб (ПАО)"
+        },
+        "_id": "5983801dd07ed144bb7cca38",
+        "crm_id": "93",
+        "name": "Новостройка (18.19%) — Уралсиб (ПВ20)",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 18.19,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 18.19,
+          "insurance": 1
+        },
+        "period": 30,
+        "firstpay": 20.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": true,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 18.19,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; При отказе от страхования жизни +1,00%<br>&bull; При сумме кредита от 6 млн руб -0,30%<br>&bull; Для зарплатных клиентов -0,20% (при сумме кредита до 6 млн руб)</p>",
+        "updated_at": "2026-03-25T07:10:40.337Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "5270d5cb05533d2de9863cacfae0d4d1.png",
+            "path": "0k/rm/"
+          },
+          "logo_square": {
+            "file_name": "95efbfbfeee9d686100ac56183c1831b.png",
+            "path": "r3/eq/"
+          },
+          "_id": "58c665588b6aa52311afa042",
+          "priority": 910,
+          "name": "Уралсиб (ПАО)"
+        },
+        "_id": "61a5f0c2d625d080d57f7cf3",
+        "crm_id": "l6a6u0ozwe",
+        "name": "Семейная (5.99%) — Уралсиб (ПВ20)",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 5.99,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            },
+            "_id": "69e8cec114bbb6b1ce6286b6"
+          },
+          "max": null,
+          "min": 5.99,
+          "insurance": 0
+        },
+        "period": 30,
+        "firstpay": 20.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 5.99,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          },
+          "_id": "69e8cec114bbb6b1ce6286b6"
+        },
+        "according_to_two_documents": false,
+        "calculator_not_available": false,
+        "comment": null,
+        "updated_at": "2026-04-22T13:36:01.757Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fcfc84c96deeb4200f3af1d72bbf805d.png",
+            "path": "ha/tb/"
+          },
+          "logo_square": {
+            "file_name": "6bf8b3603c80b56afc77c34f9d02173b.png",
+            "path": "y0/i9/"
+          },
+          "_id": "676ea7669b7f217966e12197",
+          "priority": 500,
+          "name": "Энерготрансбанк (АО КБ)"
+        },
+        "_id": "676eb04cfe097ca2bf625390",
+        "crm_id": "u3icrx3fve",
+        "name": "Семейная (6%) — Энерготрансбанк",
+        "type": "5f917bc73bff70cbf9d3dcc8",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 6,
+              "rate_max": null,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": null,
+          "min": 6,
+          "insurance": 0
+        },
+        "period": 25,
+        "firstpay": 30.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 6,
+            "rate_max": null,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "calculator_not_available": false,
+        "comment": "<p><span data-sheets-root=\"1\">&bull; При отказе от страхования жизни +1,00%<br></span></p>",
+        "updated_at": "2025-07-07T15:03:43.225Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fcfc84c96deeb4200f3af1d72bbf805d.png",
+            "path": "ha/tb/"
+          },
+          "logo_square": {
+            "file_name": "6bf8b3603c80b56afc77c34f9d02173b.png",
+            "path": "y0/i9/"
+          },
+          "_id": "676ea7669b7f217966e12197",
+          "priority": 500,
+          "name": "Энерготрансбанк (АО КБ)"
+        },
+        "_id": "676eb2b2fe097c7f786267a9",
+        "crm_id": "x8hc2u1uwn",
+        "name": "Новостройка (25.00%) — Энерготрансбанк",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 25,
+              "rate_max": 25,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": 25,
+          "min": 25,
+          "insurance": 0
+        },
+        "period": 25,
+        "firstpay": 15.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 25,
+            "rate_max": 25,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; Для клиентов, получающих ЗП на счет в Банке -0,50%<br>&bull; Для сотрудников бюджетных организаций -0,50%<br>&bull; При отказе от страхования жизни +1,00%</p>",
+        "updated_at": "2025-07-07T15:04:54.809Z",
+        "is_generator_hidden": false
+      },
+      {
+        "bank": {
+          "logo": {
+            "file_name": "fcfc84c96deeb4200f3af1d72bbf805d.png",
+            "path": "ha/tb/"
+          },
+          "logo_square": {
+            "file_name": "6bf8b3603c80b56afc77c34f9d02173b.png",
+            "path": "y0/i9/"
+          },
+          "_id": "676ea7669b7f217966e12197",
+          "priority": 500,
+          "name": "Энерготрансбанк (АО КБ)"
+        },
+        "_id": "676eb2c3fe097c5cde626821",
+        "crm_id": "51bbeskmgs",
+        "name": "Новостройка (24.50%) — Энерготрансбанк",
+        "type": "5983801cd07ed144bb7cca33",
+        "rate": {
+          "type": "constant",
+          "periods": {
+            "first_period": {
+              "rate_min": 24.5,
+              "rate_max": 24.5,
+              "commentary": null,
+              "quantity_of_months": null
+            },
+            "second_period": {
+              "rate_min": null,
+              "rate_max": null,
+              "commentary": null
+            }
+          },
+          "max": 24.5,
+          "min": 24.5,
+          "insurance": 0
+        },
+        "period": 25,
+        "firstpay": 30.01,
+        "guarantor": false,
+        "is_price_increase_possible": false,
+        "is_price_increase_unknown": false,
+        "find_out_price_increase_from": null,
+        "price_increase_calculated_from": null,
+        "how_price_increase_calculated": null,
+        "dimension_of_price_increase": null,
+        "increase_in_price": null,
+        "is_popular": false,
+        "rate_type": "constant",
+        "rate_periods": {
+          "first_period": {
+            "rate_min": 24.5,
+            "rate_max": 24.5,
+            "commentary": null,
+            "quantity_of_months": null
+          },
+          "second_period": {
+            "rate_min": null,
+            "rate_max": null,
+            "commentary": null
+          }
+        },
+        "according_to_two_documents": null,
+        "calculator_not_available": false,
+        "comment": "<p>&bull; Для клиентов, получающих ЗП на счет в Банке -0,50%<br>&bull; Для сотрудников бюджетных организаций -0,50%<br>&bull; При отказе от страхования жизни +1,00%</p>",
+        "updated_at": "2025-05-29T07:48:36.360Z",
+        "is_generator_hidden": false
+      }
+    ]
+  }
+}

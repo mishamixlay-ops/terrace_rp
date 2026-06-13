@@ -1,5 +1,6 @@
 # ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 # ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
+# ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 #!/usr/bin/env python3
 """
 Генератор HTML-фильтра для данных TrendAgent.
@@ -1607,6 +1608,14 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-mtg-row.open .apc-mtg-chips { animation:apcStagger .4s .28s forwards; }
 .apc-mtg-chip { font-size:11px; background:#fff; border:1px solid #E5E5EA; border-radius:8px; padding:4px 9px; color:#555; }
 .apc-mtg-chip b { color:#1a1a1a; font-weight:500; }
+.apc-mtg-deduction { margin-top:12px; padding:11px 12px; background:#E1F5EE; border-radius:10px; opacity:0; transform:translateY(4px); }
+.apc-mtg-row.open .apc-mtg-deduction { animation:apcStagger .4s .34s forwards; }
+.apc-mtg-ded-head { font-size:13px; color:#0F6E56; display:flex; align-items:center; gap:6px; }
+.apc-mtg-ded-head b { font-weight:600; }
+.apc-mtg-ded-ic { display:inline-block; font-size:13px; }
+.apc-mtg-ded-rows { margin-top:7px; }
+.apc-mtg-ded-row { display:flex; justify-content:space-between; font-size:12px; color:#0F6E56; padding:2px 0; }
+.apc-mtg-ded-row span:last-child { font-weight:500; }
 .apc-inst-drawer { display:grid; grid-template-rows:0fr; transition:grid-template-rows 0.42s cubic-bezier(.4,0,.2,1); }
 .apc-inst-card.open .apc-inst-drawer { grid-template-rows:1fr; }
 .apc-inst-drawer-inner { overflow:hidden; min-height:0; }
@@ -3262,6 +3271,14 @@ function openAptCard(apt) {
           chips.forEach(function(c){ mhtml += '<span class="apc-mtg-chip">' + c + '</span>'; });
           mhtml += '</div>';
         }
+
+        // Налоговый вычет (фиксированный по НК РФ, одинаков для всех программ)
+        mhtml += '<div class="apc-mtg-deduction">';
+        mhtml += '<div class="apc-mtg-ded-head"><span class="apc-mtg-ded-ic">↩</span>Налоговый вычет <b>до 650 000 ₽</b></div>';
+        mhtml += '<div class="apc-mtg-ded-rows">';
+        mhtml += '<div class="apc-mtg-ded-row"><span>за квартиру</span><span>260 000 ₽</span></div>';
+        mhtml += '<div class="apc-mtg-ded-row"><span>за проценты по кредиту</span><span>390 000 ₽</span></div>';
+        mhtml += '</div></div>';
 
         mhtml += '</div></div></div>'; // detail + inner + panel
         mhtml += '</div>'; // row

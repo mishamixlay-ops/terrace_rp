@@ -1,4 +1,5 @@
 # ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
+# ACTUAL VERSION: v110 (source: Generate_filter_110__quick_categories.py)
 #!/usr/bin/env python3
 """
 Генератор HTML-фильтра для данных TrendAgent.
@@ -1899,22 +1900,6 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 #apc-about-more[data-expanded]::after,
 .apc-fin-more[data-expanded]::after {
   transform:rotate(180deg);
-}
-
-/* === Шевроны рассрочек — SVG жирный, поворот при .open === */
-.apc-inst-chevron {
-  font-size:0 !important;
-  width:18px;
-  height:18px;
-  display:inline-block;
-  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230F1014" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>');
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:center;
-  transition:transform 0.18s ease;
-  flex-shrink:0;
-  padding-top:0 !important;
-  color:transparent !important;
 }
 
 /* === Финансовый disclaimer — на сером, между островами === */

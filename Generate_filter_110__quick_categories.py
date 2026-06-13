@@ -1523,8 +1523,9 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 .apc-promo-card-top { padding:10px 12px; background:#F2F2F7; border-radius:12px; transition:transform .3s cubic-bezier(.34,1.56,.64,1); transform-origin:center; }
 .apc-promo-card.open .apc-promo-card-top { transform:scale(1.03); }
 .apc-promo-card-head { display:flex; align-items:center; justify-content:space-between; }
-.apc-promo-card-name { font-size:14px; font-weight:500; color:#1a1a1a; transition:transform .3s cubic-bezier(.34,1.56,.64,1); transform-origin:left center; display:inline-block; }
-.apc-promo-card.open .apc-promo-card-name { transform:scale(1.08); }
+.apc-promo-card-name { font-size:14px; font-weight:500; color:#1a1a1a; }
+.apc-promo-card-titlewrap { transition:transform .3s cubic-bezier(.34,1.56,.64,1); transform-origin:left center; }
+.apc-promo-card.open .apc-promo-card-titlewrap { transform:scale(1.08); }
 .apc-promo-card-val { font-size:14px; font-weight:500; color:#8E8E93; margin-left:6px; }
 .apc-promo-card-sub { font-size:12px; color:#8E8E93; margin-top:2px; }
 .apc-promo-card-chevron { transition:transform 0.3s ease; flex-shrink:0; }
@@ -1975,22 +1976,6 @@ body { margin:0; padding:0; font-family:'Inter Tight',sans-serif; background:var
 #apc-about-more[data-expanded]::after,
 .apc-fin-more[data-expanded]::after {
   transform:rotate(180deg);
-}
-
-/* === Шевроны рассрочек — SVG жирный, поворот при .open === */
-.apc-inst-chevron {
-  font-size:0 !important;
-  width:18px;
-  height:18px;
-  display:inline-block;
-  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230F1014" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>');
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:center;
-  transition:transform 0.18s ease;
-  flex-shrink:0;
-  padding-top:0 !important;
-  color:transparent !important;
 }
 
 /* === Финансовый disclaimer — на сером, между островами === */
@@ -3075,7 +3060,7 @@ function openAptCard(apt) {
           phtml += '>';
           phtml += '<div class="apc-promo-card-top">';
           phtml += '<div class="apc-promo-card-head">';
-          phtml += '<div>';
+          phtml += '<div class="apc-promo-card-titlewrap">';
           phtml += '<span class="apc-promo-card-name">' + c.label + '</span>';
           if (c.val) phtml += '<span class="apc-promo-card-val">' + c.val + '</span>';
           phtml += '</div>';
